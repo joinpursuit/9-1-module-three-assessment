@@ -8,7 +8,7 @@ A minium of 5 points must be attained in order to pass this assessmemt.
 
 You may receive partial credit (0.5 points) for code that is close to passing the tests, but does not pass all the tests.
 
-If you have gotten all the tests passing, you are strongly encouraged to work on the CSS/overall appearance of the app and add additional features. A nice weather app project has the potential to be something you could add to your portfolio.
+If you have gotten all the tests passing, you are strongly encouraged to work on the CSS/overall appearance of the app and add additional features. A nice project has the potential to be something you could add to your portfolio.
 
 ## Assessment Setup
 
