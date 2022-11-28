@@ -28,7 +28,7 @@ If you have gotten all the tests passing, you are strongly encouraged to work on
 
 ### Tests
 
-There will be no tests for this assessment.
+There are no tests for this assessment.
 
 ## Instructions
 
