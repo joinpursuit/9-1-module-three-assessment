@@ -28,6 +28,10 @@ If you have completed the instructions below, you are strongly encouraged to wor
 
 There are no tests for this assessment.
 
+### Submission
+
+Before submitting your application, please take the time to click through your app and confirm that everything is rendering and working.
+
 ## Instructions
 
 Using the [Studio Ghibli API](https://ghibliapi.herokuapp.com/), you are going to create a frontend-only application that displays information about the movies, characters, and locations created by Studio Ghibli.
