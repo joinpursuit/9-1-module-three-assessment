@@ -28,21 +28,7 @@ If you have gotten all the tests passing, you are strongly encouraged to work on
 
 ### Tests
 
-To run the tests, you can run the following command from the command line. You will need to be in the root directory of your local directory.
-
-```
-npm run cypress
-```
-
-This will open the Cypress testing window, where you can click to run an individual suite of tests or all of the tests at once.
-
-#### Testing Tips
-
-Keep the following in mind for this lab as you run the tests.
-
-1. While running your tests, you must have a server up and running in another terminal. This means you will have _both_ a terminal window running the actual React application _and_ a terminal window running the tests.
-
-1. While the `cypress-watch-and-reload` package has been installed in this project, sometimes the React application will take longer to reload than the tests. If you feel as though a test should be passing that isn't, try pressing the re-run button in the Cypress tests before asking for help.
+There will be no tests for this assessment.
 
 ## Instructions
 

@@ -36,8 +36,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "cypress": "9.7",
-    "cypress-watch-and-reload": "^1.10.3"
-  }
+  "devDependencies": {}
 }
