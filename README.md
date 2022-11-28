@@ -2,13 +2,13 @@
 
 This challenge is designed to assess the React skills you have developed so far.
 
-There are 7 features that need to be created. Each completed feature (passes all the tests) will be worth 1 point.
+There are 7 features that need to be created. Each completed feature will be worth 1 point.
 
 A minium of 5 points must be attained in order to pass this assessmemt.
 
-You may receive partial credit (0.5 points) for code that is close to passing the tests, but does not pass all the tests.
+You may receive partial credit (0.5 points) for code that is close to completing the feature.
 
-If you have gotten all the tests passing, you are strongly encouraged to work on the CSS/overall appearance of the app and add additional features. A nice project has the potential to be something you could add to your portfolio.
+If you have completed the instructions below, you are strongly encouraged to work on the CSS/overall appearance of the app and add additional features. A nice project has the potential to be something you could add to your portfolio.
 
 ## Assessment Setup
 
@@ -22,9 +22,7 @@ If you have gotten all the tests passing, you are strongly encouraged to work on
    npm install
    ```
 
-   This will install the libraries needed to run the tests.
-
-1. Open up the repository in VSCode. Follow the instructions below to complete the Lab.
+1. Open up the repository in VSCode. Follow the instructions below to complete the assessment.
 
 ### Tests
 
