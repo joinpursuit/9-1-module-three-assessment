@@ -13,7 +13,6 @@ function RouteComponent(props) {
                 <Route path = "people" element = {<People />} />
                 <Route path = "locations" element = {<Locations />} />
             </Route>
-
         </Routes>
     );
 }

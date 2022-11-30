@@ -1,15 +1,27 @@
-import { useContext, createContext } from "react";
+import { createContext, useState } from "react";
 import Nav from "./Components/Nav";
+import { fetchData } from "./Functions/fetch";
 
 // Declare variable for data consumption
-export const ContextData = createContext(
+export const ContextData = createContext()
 
-)
+
 function Provider(props) {
-
+    // Declare states for movie, people, and location data
+    const [movies, setMovies] = useState([])
+    const [people, setPeople] = useState([])
+    const [locations, setLocations] = useState([])
 
     return (
-       <ContextData.Provider>
+       <ContextData.Provider value ={{
+        movies,
+        setMovies,
+        people,
+        setPeople,
+        locations,
+        setLocations,
+        fetchData,
+       }}>
         <Nav />
         {props.children}
        </ContextData.Provider>
