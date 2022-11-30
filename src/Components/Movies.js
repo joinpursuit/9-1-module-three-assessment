@@ -14,10 +14,10 @@ function Movies(props) {
         description: "",
     })
    
-
     useEffect(() => {
         fetchData(`films`)
         .then(respJson => setMovies(respJson))
+        .catch(err => console.log(err))
     })
     return (
         <div className="movies">
@@ -32,15 +32,10 @@ function Movies(props) {
                 movieInfo.title && 
                 <section className="movieInfo">
                     <h3>Title: {movieInfo.title}</h3>
-                    <p><span>Released:</span> {movieInfo.releaseDate}</p>
-                    <p><span>Description:</span> {movieInfo.description}</p>
-                </section>
-                    
+                    <p><span>Released:<br></br></span> {movieInfo.releaseDate}</p>
+                    <p><span>Description: <br></br></span> {movieInfo.description}</p>
+                </section> 
                 }
-
-             
-            
-            
         </div>
     );
 }

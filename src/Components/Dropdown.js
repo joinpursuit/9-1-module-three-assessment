@@ -12,15 +12,14 @@ function Dropdown({dataArr, stateVar, stateVarFunction, displayVarFunction }) {
                 description: "",
             })
         }
-        else{
+        else {
             const movie = dataArr.find(({id}) => id === value)
             displayVarFunction({
                 title: movie.title,
                 releaseDate: movie.release_date,
                 description: movie.description
             })
-        }
-       
+        }     
     }
   
     return (

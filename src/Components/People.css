@@ -1,0 +1,15 @@
+
+
+
+.people form {
+    text-align: center;
+}
+
+.people form input {
+    width: 200px;
+}
+
+.people button {
+    height: 25px;
+    width: fit-content;
+}
