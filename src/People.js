@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import './People.css';
-export default function People() {
-  const [data, setData] = useState([]);
-  const [name, setName] = useState('');
-  const [input, setInput] = useState({});
-
+export default function People({
+  data,
+  setData,
+  name,
+  setName,
+  input,
+  setInput,
+}) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const found = data.find(
       (person) => person.name.toLowerCase() === name.toLowerCase()
     );
     setInput(found || {});
+    setName('');
   };
 
   useEffect(() => {
@@ -40,14 +44,18 @@ export default function People() {
       </form>
       {input.id ? (
         <div>
-          <h1>Name: {input.name}</h1>
+          <h1>Name: {input.name ? input.name : null}</h1>
           <p>
             <b>Age: </b>
-            {input.age}
+            {input.age ? input.age : null}
           </p>
           <p>
             <b>Eye Color: </b>
             {input.eye_color}
+          </p>
+          <p>
+            <b>Gender: </b>
+            {input.gender ? input.gender : null}
           </p>
           <p>
             <b>Hair Color: </b>
