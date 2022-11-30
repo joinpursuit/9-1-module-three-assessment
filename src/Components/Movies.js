@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 export default function Movies() {
   const [movies, setMovies] = useState([]);
   const [movie, setMovie] = useState({});
-  const [isSelected, setIsSelected] = useState(false);
 
   useEffect(() => {
     fetch("films.json")
@@ -14,8 +13,7 @@ export default function Movies() {
 
   const handleChange = (e) => {
     const found = movies.find(({ id }) => id === e.target.value);
-    setMovie(found);
-    e.target.value ? setIsSelected(true) : setIsSelected(false);
+    setMovie(found || {});
   };
   return (
     <div className="movies">
@@ -30,7 +28,7 @@ export default function Movies() {
           ))}
       </select>
 
-      {isSelected && (
+      {movie.id && (
         <article className="selected-movie">
           <h3>
             <span>Title: </span>
