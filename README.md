@@ -146,7 +146,7 @@ The following learning objectives will be assessed in this assessment:
 
 - Build functional components with JSX.
 - Create a component hierarchy, making use of multiple components in a single React application.
-- Write class components in React making use of the `constructor()` and `render()` methods.
+- Write functional components in React making use of hooks like: useState, useEffect.
 - Use props to customize components.
 - Build complex component architectures that pass props downwards multiple levels.
 - Set state on an individual component to modify that component’s presentation.
