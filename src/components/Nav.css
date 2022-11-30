@@ -1,0 +1,10 @@
+.nav {
+    background-color: rgba(16, 57, 171, 0.787);
+    height: 8vh;
+    width: 100vw;
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+}
