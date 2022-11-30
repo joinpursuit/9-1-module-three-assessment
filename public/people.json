@@ -15,8 +15,8 @@
   {
     "id": "fe93adf2-2f3a-4ec4-9f68-5422f1b87c01",
     "name": "Pazu",
-    "gender": "Male",
     "age": "13",
+    "gender": "Male",
     "eye_color": "Black",
     "hair_color": "Brown",
     "films": [

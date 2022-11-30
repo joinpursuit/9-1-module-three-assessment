@@ -4,7 +4,7 @@ export default function Movie({ movie }) {
   return (
     <div className="movie">
       <br />
-      <h1>{movie.title}</h1>
+      <h2>{movie.title}</h2>
       <p>
         <br />
         <b>Directed by:</b> <em>{movie.director}</em>

@@ -7,7 +7,7 @@ export default function Nav() {
         <img
           src="https://www.nicepng.com/png/detail/198-1987142_i-want-to-watch-all-of-the-studio.png"
           alt="logo"
-          style={{ width: "50px", height: "50px" }}
+          // style={{ width: "50px", height: "50px" }}
         />
       </Link>
       <Link to="/movies">Movies</Link>
