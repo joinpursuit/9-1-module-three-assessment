@@ -152,6 +152,6 @@ The following learning objectives will be assessed in this assessment:
 - Set state on an individual component to modify that component’s presentation.
 - Write an event handler that modifies state on user interaction.
 - Build controlled forms that manage the state of the form.
-- Integrate API calls into your React application through `componentDidMount()`.
+- Integrate API calls into your React application through `useEffect` and events handlers.
 - Use React Router to create the appearance of multiple pages.
 - Use the `Link` element to build links to different pages on your application.
