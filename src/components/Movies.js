@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 
 import { get } from "../fetch";
 
+import Movie from "./Movie";
+
 export default function Movies() {
   const [movies, setMovies] = useState([]);
-  const [movie, setMovie] = useState({});
+  const [movie, setMovie] = useState();
 
   function handleSelect(e) {
     setMovie(movies.find((movie) => movie.title === e.target.value));
@@ -27,7 +29,7 @@ export default function Movies() {
           ))}
         </select>
       </label>
-      {movie ? "movie chosen" : ""}
+      {movie ? <Movie movie={movie} /> : ""}
     </div>
   );
 }
