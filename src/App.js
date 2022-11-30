@@ -1,5 +1,10 @@
+import React from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-
+import Home from "./Components/Home"
+import Movies from "./Components/Movies"
+import People from "./Components/People"
+import Locations from "./Components/Locations"
+import Nav from "./Components/Nav"
 
 function App() {
   return (
