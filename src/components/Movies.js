@@ -13,7 +13,9 @@ export default function Movies() {
   }
 
   useEffect(() => {
-    get("films").then((res) => setMovies(res));
+    get("films")
+      .then((res) => setMovies(res))
+      .catch((err) => console.error(err));
   }, []);
 
   return (
