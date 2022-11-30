@@ -7,10 +7,8 @@
 nav {
   display: flex;
   justify-content: space-around;
-  /* justify-content: center; */
   background: #00acef;
   padding: 1em;
-  margin-bottom: 2em;
   /* font-family: sans-serif; */
 }
 
@@ -18,7 +16,11 @@ nav a {
   text-decoration: none;
   font-size: 2em;
   color: white;
-  margin-left: 100px;
+  /* margin-left: 100px; */
+}
+
+nav a:hover {
+  color: #eb7786;
 }
 
 nav img {
@@ -46,9 +48,9 @@ li {
 }
 
 .locations {
-  background: ghostwhite;
+  background: #8282f145;
   padding: 1em;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 .locations > ul {
@@ -56,32 +58,68 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-left: 0;
+  /* padding: 0px; */
+  /* padding-left: ; */
 }
 
 .locations ul > li {
-  background: lemonchiffon;
-  width: 26%;
+  background: rgb(223, 188, 242);
+  width: 25%;
   padding: 2em;
+  /* padding-left: 0; */
+  /* padding-right: 50px; */
+  margin-bottom: 30px;
+  list-style: none;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.336);
+  
+
 }
+
+/* .ulLi {
+  padding: 0;
+  box-shadow: 20px black;
+  margin-right: 10px;
+} */
 
 .locations ul > li > ul {
   margin-left: 0;
   list-style: none;
+  
+  /* margin-left: 0px; */
 }
 
 .locations ul > li > ul li {
   background: ghostwhite;
   display: flex;
   flex-wrap: no-wrap;
-  width: 90%;
+  width: 75%;
   justify-content: center;
+  padding: 30px;
+  margin: 20px;
+  margin-left: -10px;
+  border-radius: 20px;
+  border: 3px rgb(198, 157, 198) dashed;
 }
+
 
 .locations ul > li > ul li span {
   text-align: center;
   display: inline-block;
   width: 100%;
+
 }
+
+.locations strong {
+  padding-right: 10px;
+  margin: 0;
+}
+
+.locations button {
+  margin: 5px;
+  margin-bottom: 20px;
+}
+
 .details li {
   list-style: none;
   margin: 0.5em 0;
@@ -94,15 +132,20 @@ li {
 
 .people {
   background: lemonchiffon;
-  height: 80vh;
+  height: 100vh;
   padding-top: 1em;
 }
 
 .people aside {
-  background: ghostwhite;
-  width: 80%;
-  min-height: 50%;
+  background: rgba(248, 248, 255, 0.522);
+  width: 50%;
+  max-height: 50%;
   margin: auto;
+  margin-top: 20px ;
+  /* border: 5px rgb(240, 225, 90) dashed; */
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.336)
+  /* padding: 50px; */
 }
 
 .people aside h3 {
@@ -116,15 +159,20 @@ li {
 
 .movies {
   padding-top: 1em;
-  height: 80vh;
+  height: 100vh;
   background: #d7f0f2;
 }
 
 .movies aside {
-  background: aliceblue;
-  width: 90%;
+  background: rgba(240, 248, 255, 0.522);
+  width: 50%;
+  max-height: 50%;
   margin: auto;
-  padding: 1em;
+  margin-top: 1em;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.336)
+  /* border: 5px rgb(139, 197, 247) dashed; */
+  /* padding: 1em; */
 }
 
 ul li::marker {
@@ -135,5 +183,26 @@ ul li::marker {
 
 .gif {
   height: 500px;
-  padding: 50px;
+  margin: 20px;
+  border-radius: 30px;
+  box-shadow: 10px 10px 20px 20px rgba(0, 0, 0, 0.591);
+}
+
+h1 {
+  color: #00acef;
+  margin: 10px;
+}
+
+.home {
+  background-color: #ff9daa45;
+  padding: 1em;
+  height: 100vh;
+}
+
+p {
+  padding: 10px;
+}
+
+.pplForm {
+  margin: 10px;
 }

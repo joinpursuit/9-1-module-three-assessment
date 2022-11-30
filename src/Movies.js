@@ -31,13 +31,15 @@ export default function Movies(){
                 <option key={choice.id} value={choice.id}>{choice.title}</option>
               ))}  
             </select>
+            <aside>
             {film.id && (
-          <div>
-            <p>Title: {film.title}</p>
-            <p>Release Date: {film.release_date}</p>
-            <p>Description: {film.description}</p>
-          </div>
-        )}
-        </div>
+              <div>
+                <h2>Title: {film.title}</h2>
+                <p><strong>Release Date: </strong>{film.release_date}</p>
+                <p><strong>Description: </strong>{film.description}</p>
+              </div>
+            )}
+            </aside>
+              </div>
     )
 }
