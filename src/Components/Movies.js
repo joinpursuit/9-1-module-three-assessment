@@ -26,15 +26,14 @@ function Movies(props) {
             dataArr={movies}
             stateVar = {select} 
             stateVarFunction = {setSelect}
-            displayVar = {movieInfo}
             displayVarFunction = {setMovieInfo}
              />
                 {
                 movieInfo.title && 
                 <section className="movieInfo">
-                    <h4>{movieInfo.title}</h4>
-                    <p>Released: {movieInfo.releaseDate}</p>
-                    <p>Description: {movieInfo.description}</p>
+                    <h3>Title: {movieInfo.title}</h3>
+                    <p><span>Released:</span> {movieInfo.releaseDate}</p>
+                    <p><span>Description:</span> {movieInfo.description}</p>
                 </section>
                     
                 }

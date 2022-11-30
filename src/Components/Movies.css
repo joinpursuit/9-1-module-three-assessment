@@ -23,7 +23,13 @@
     grid-column: span 3;
 }
 
-.movies .movieInfo h4 {
-    margin: 0;
+.movieInfo h3 {
+    font-size: 30px;
+}
+.movies .movieInfo span {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
 }
 

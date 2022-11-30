@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Dropdown({dataArr, stateVar, stateVarFunction, displayVar, displayVarFunction }) {
+function Dropdown({dataArr, stateVar, stateVarFunction, displayVarFunction }) {
      // handle onChange function
      function handleSelect(e) {
         const value = e.target.value
