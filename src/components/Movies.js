@@ -14,7 +14,7 @@ export default function Movies() {
 
   useEffect(() => {
     get("films").then((res) => setMovies(res));
-  });
+  }, []);
 
   return (
     <div className="movies">
