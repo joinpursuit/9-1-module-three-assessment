@@ -1,10 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import Navbar from "./common/Navbar";
+
 function App() {
   return (
     <Router>
       <div className="app">
-        <nav></nav>
+        <Navbar />
         <Routes>
           <Route path="/" element={<h1>Welcome to GhibliApp</h1>} />
           <Route path="/movies" element={<h1>Movies</h1>} />
