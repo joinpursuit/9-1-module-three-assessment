@@ -1,0 +1,29 @@
+
+.movies {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 10% 10% 80%;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.movies h2 {
+    grid-row: 1;
+    grid-column: 2;
+    
+}
+
+.movies select {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.movies .movieInfo {
+    grid-row: 3;
+    grid-column: span 3;
+}
+
+.movies .movieInfo h4 {
+    margin: 0;
+}
+
