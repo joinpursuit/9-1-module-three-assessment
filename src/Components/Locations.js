@@ -1,5 +1,5 @@
 import { useState , useEffect } from "react"
-
+import "./Location.css"
 
 export default function Locations(){
     const [locations , setLocations] = useState([])
@@ -53,20 +53,37 @@ function sortClimate(){
  
 }
 
+function sortTerrain(){
+    const st = locations.sort((a , b) => a.terrain.localeCompare(b.terrain))
+    st.map((sort) => {
+        return (
+        <ul>
+            <li>
+            <p><span style={{fontWeight: "bold"}}>Name:</span> {sort.name}</p>
+          <p><span style={{fontWeight: "bold"}}>Climate:</span> {sort.climate}</p>
+            <p><span style={{fontWeight: "bold"}}>Terrain:</span> {sort.terrain}</p>
+            </li>
+        </ul>
+        )
+    })
+ 
+}
 
 
     return(
         <div>
             <h2>List of Locations</h2>
+            <section>
+
             <button onClick={toggleInfo}>{!show ? "Show Locations" : "Hide Locations"}</button>
+            <button onClick={() => sortName()}>Sort By Name</button>
+            <button onClick={() => sortClimate()}>Sort By Climate</button>
+            <button onClick={() => sortTerrain()}>Sort By Terrain</button>
+            </section>
             {show ? (
                 
                 <div>
-                    <button onClick={() => sortName()}>Sort By Name</button>
-                    <br></br>
-                    <button onClick={() => sortClimate()}>Sort Climate</button>
-                    
-                    <ul>
+                    <ul className="first-ul">
                     {locations.map((loc) => {
                         return (
 

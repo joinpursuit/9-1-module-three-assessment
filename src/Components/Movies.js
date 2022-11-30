@@ -1,4 +1,6 @@
 import { useEffect , useState } from "react"
+import "./Movies.css"
+
 
 export default function Movies(){
     const [movies , setMovies] = useState([])
@@ -23,7 +25,7 @@ export default function Movies(){
     return(
         <div>
             <h2>Select a Movie</h2>
-             <select onChange={handleChoice}>
+             <select onChange={handleChoice} className="selectBar">
             <option value=""></option>
             {movies.map((movie) => {
                 return(
@@ -34,8 +36,8 @@ export default function Movies(){
         {select.id ? (
             <div>
                 <h2><span style={{fontWeight: "bold"}}>Title:</span> {select.title}</h2>
-                <p><span style={{fontWeight: "bold"}}>Release Date:</span> {select.release_date}</p>
-                <p><span style={{fontWeight: "bold"}}>Description:</span> {select.description}</p>
+                <p className="release"><span style={{fontWeight: "bold"}}>Release Date:</span> {select.release_date}</p>
+                <p className="description"><span style={{fontWeight: "bold"}}>Description:</span> {select.description}</p>
             </div>
         ): null}
         </div>

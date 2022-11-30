@@ -1,5 +1,5 @@
 import { useEffect , useState } from "react"
-
+import './People.css'
 
 
 export default function People(){
@@ -30,23 +30,25 @@ const peopleData = 'people.json'
     return(
         <div>
             <h2>Search for Person</h2>
+            <br></br>
             <form onSubmit={handleSubmit}>
-            <lable htmlFor="name"> Search:
+            <lable htmlFor="name">Search: </lable>
                 <input
                 type="text"
+                id="name"
                 placeholder="Haku"
                 value={search}
                 onChange={(e) => {setSearch(e.target.value)}}
                 />
-            </lable>
+
             <button type="submit">Submit</button>
             </form>
             {input.id ? (
                 <div>
-                    <h3>Name: {input.name}</h3>
-                    <p> <span style={{fontWeight: "bold"}}>Age:</span> {input.age}</p>
-                    <p> <span style={{fontWeight: "bold"}}>Eye Color:</span> {input.eye_color}</p>
-                    <p> <span style={{fontWeight: "bold"}}>Hair Color:</span> {input.hair_color}</p>
+                    <h3 className="character">Name: {input.name}</h3>
+                    <p className="age"><span style={{fontWeight: "bold"}}>Age:</span> {input.age}</p>
+                    <p className="eyes"> <span style={{fontWeight: "bold"}}>Eye Color:</span> {input.eye_color}</p>
+                    <p className="hair"> <span style={{fontWeight: "bold"}}>Hair Color:</span> {input.hair_color}</p>
                 </div>
             ) : "Not Found"}
         </div>
