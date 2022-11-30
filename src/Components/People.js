@@ -5,10 +5,13 @@ const People = () => {
     const [input, setInput] = useState({})
     const [name, setName] = useState("")
 
+    
+
     const handleSubmit = (e) => {
         e.preventDefault()
         const found = people.find(item => item.name.toLowerCase() === name.toLowerCase())
-        setInput(found || {})
+        setInput(found || console.log("not found"))
+        setName("")
     }
 
     useEffect(()=>{
@@ -35,7 +38,8 @@ const People = () => {
                 </label>
                     <button type="submit">Submit</button>
                 </form>
-                {input.id && (
+
+                {input?.id && (
                     <div>
                        <h1>Name: {input.name}</h1>
                         <p>Age: {input.age}</p>
