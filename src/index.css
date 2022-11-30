@@ -1,25 +1,30 @@
 * {
   text-align: center;
+  margin: auto;
+  font-family: 'Ghibli', sans-serif;
 }
 
 nav {
   display: flex;
   justify-content: space-around;
-  background: #517e94;
+  /* justify-content: center; */
+  background: #00acef;
   padding: 1em;
   margin-bottom: 2em;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
 }
 
 nav a {
   text-decoration: none;
   font-size: 2em;
   color: white;
+  margin-left: 100px;
 }
 
 nav img {
   height: 50px;
   width: 50px;
+  /* margin-top: 10px; */
 }
 
 main {
@@ -33,7 +38,7 @@ h2 {
   width: 90%;
   margin: auto;
   text-align: center;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
 }
 
 li {
@@ -126,4 +131,9 @@ ul li::marker {
   font-size: 150%;
   color: #517e94;
   opacity: 0;
+}
+
+.gif {
+  height: 500px;
+  padding: 50px;
 }

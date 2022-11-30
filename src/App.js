@@ -6,6 +6,7 @@ import People from "./People";
 import Locations from "./Locations";
 import "./index.css"
 
+
 function App() {
   return (
     <Router>

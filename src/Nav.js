@@ -5,7 +5,7 @@ export default function Nav(){
         <div className="nav">
             <nav>
                 <Link to="/">
-                <img src="https://www.pngfind.com/pngs/m/385-3859275_totoro-studio-ghibli-logo-hd-png-download.png" alt="logo"/>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmcvGr_NwOINTvOf5xZxkM7XvlIUwXPkTlDBq1xrIq&s" alt="logo"/>
                 </Link>    
                 
                 <Link to="/">Home</Link>
