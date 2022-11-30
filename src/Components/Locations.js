@@ -20,21 +20,26 @@ export default function Locations(){
     }, [])
 
     
-function sortName(){
-    const sn = locations.sort((a , b) => a.name.localeCompare(b.name))
-    sn.map((sort) => {
-        return (
-        <ul>
-            <li>
-            <p><span style={{fontWeight: "bold"}}>Name:</span> {sort.name}</p>
-          <p><span style={{fontWeight: "bold"}}>Climate:</span> {sort.climate}</p>
-            <p><span style={{fontWeight: "bold"}}>Terrain:</span> {sort.terrain}</p>
-            </li>
-        </ul>
-        )
-    })
+    
+  
+    function sortName(){
+        const sn = locations.sort((a , b) => a.name.localeCompare(b.name))
+        sn.map((sort) => {
+            return (
+            <ul>
+                <li>
+                <p><span style={{fontWeight: "bold"}}>Name:</span> {sort.name}</p>
+              <p><span style={{fontWeight: "bold"}}>Climate:</span> {sort.climate}</p>
+                <p><span style={{fontWeight: "bold"}}>Terrain:</span> {sort.terrain}</p>
+                </li>
+            </ul>
+            )
+        })
+    
+    }
 
-}
+
+   
 
 
 function sortClimate(){
@@ -50,14 +55,16 @@ function sortClimate(){
         </ul>
         )
     })
- 
+    
 }
+
+
 
 function sortTerrain(){
     const st = locations.sort((a , b) => a.terrain.localeCompare(b.terrain))
     st.map((sort) => {
         return (
-        <ul>
+            <ul>
             <li>
             <p><span style={{fontWeight: "bold"}}>Name:</span> {sort.name}</p>
           <p><span style={{fontWeight: "bold"}}>Climate:</span> {sort.climate}</p>
@@ -69,33 +76,31 @@ function sortTerrain(){
  
 }
 
-
     return(
-        <div>
+        <div className="locations">
             <h2>List of Locations</h2>
-            <section>
-
+          <div className="buttons">
             <button onClick={toggleInfo}>{!show ? "Show Locations" : "Hide Locations"}</button>
-            <button onClick={() => sortName()}>Sort By Name</button>
-            <button onClick={() => sortClimate()}>Sort By Climate</button>
-            <button onClick={() => sortTerrain()}>Sort By Terrain</button>
-            </section>
+            </div>
             {show ? (
                 
                 <div>
+                    <section className="buttons">
+                    <button onClick={() => sortName()}>Sort By Name</button>
+                    <button onClick={() => sortClimate()}>Sort By Climate</button>
+                    <button onClick={() => sortTerrain()}>Sort By Terrain</button>
+                    </section>
                     <ul className="first-ul">
                     {locations.map((loc) => {
                         return (
-
-                        <li>
-                            <ul>
+                            <ul key={loc.id}>
                                 <li>
                                 <p><span style={{fontWeight: "bold"}}>Name:</span> {loc.name}</p>
                                 <p><span style={{fontWeight: "bold"}}>Climate:</span> {loc.climate}</p>
                                 <p><span style={{fontWeight: "bold"}}>Terrain:</span> {loc.terrain}</p>
                                 </li>
                             </ul>
-                        </li>
+                   
                         )
                     })}
                     </ul>

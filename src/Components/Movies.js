@@ -4,7 +4,7 @@ import "./Movies.css"
 
 export default function Movies(){
     const [movies , setMovies] = useState([])
-    const [select , setSelect] = useState({})
+    const [selects , setSelects] = useState({})
     const movieData = `films.json`
 
     useEffect(() => {
@@ -18,14 +18,16 @@ export default function Movies(){
     function handleChoice(e){
         const change = e.target.value
      const found = movies.find(item => item.id === change)
-     setSelect(found || {})
+     setSelects(found || {})
  }
 
 
     return(
-        <div>
-            <h2>Select a Movie</h2>
-             <select onChange={handleChoice} className="selectBar">
+        <div className="movies">
+            <h2>Select a Movie</h2> 
+            <br></br>
+            <div className="selectBar">
+             <select onChange={handleChoice}>
             <option value=""></option>
             {movies.map((movie) => {
                 return(
@@ -33,11 +35,15 @@ export default function Movies(){
                 )
             })}
         </select>
-        {select.id ? (
+            </div>
+            
+            <br></br>
+
+        {selects.id ? (
             <div>
-                <h2><span style={{fontWeight: "bold"}}>Title:</span> {select.title}</h2>
-                <p className="release"><span style={{fontWeight: "bold"}}>Release Date:</span> {select.release_date}</p>
-                <p className="description"><span style={{fontWeight: "bold"}}>Description:</span> {select.description}</p>
+                <h2>Title: {selects.title}</h2>
+                <p className="release"><span style={{fontWeight: "bold"}}>Release Date:</span> {selects.release_date}</p>
+                <p className="description"><span style={{fontWeight: "bold"}}>Description:</span> {selects.description}</p>
             </div>
         ): null}
         </div>

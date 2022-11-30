@@ -28,21 +28,21 @@ const peopleData = 'people.json'
 
 
     return(
-        <div>
-            <h2>Search for Person</h2>
+        <div className="people">
+            <h2>Search for a Person</h2>
             <br></br>
             <form onSubmit={handleSubmit}>
-            <lable htmlFor="name">Search: </lable>
                 <input
-                type="text"
                 id="name"
+                type="text"
                 placeholder="Haku"
                 value={search}
                 onChange={(e) => {setSearch(e.target.value)}}
                 />
-
             <button type="submit">Submit</button>
             </form>
+            <div className="output">
+
             {input.id ? (
                 <div>
                     <h3 className="character">Name: {input.name}</h3>
@@ -50,7 +50,9 @@ const peopleData = 'people.json'
                     <p className="eyes"> <span style={{fontWeight: "bold"}}>Eye Color:</span> {input.eye_color}</p>
                     <p className="hair"> <span style={{fontWeight: "bold"}}>Hair Color:</span> {input.hair_color}</p>
                 </div>
-            ) : "Not Found"}
+            ) : "No Founds"}
+        
+            </div>
         </div>
     )
 }
