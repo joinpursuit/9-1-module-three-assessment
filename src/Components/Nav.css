@@ -1,0 +1,23 @@
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: .5fr repeat(3,1fr);
+    justify-items: right;
+    align-items: baseline;
+    font-size: 14px;
+}
+
+.nav-bar img {
+    grid-column: 1;
+    height: 50px;
+    /* width: 50px; */
+}
+
+.nav-bar a:first-child {
+    justify-self: center;
+}
+
+.nav-bar a:hover {
+    color: aqua;
+    transform: scale(1.2);
+}
