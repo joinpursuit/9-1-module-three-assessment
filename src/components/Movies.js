@@ -16,7 +16,7 @@ export default function Movies() {
   function handleSelect(e) {
     const selected = e.target.value
     const found = movies.find((item) => item.id === selected)
-    setSelect(found || {})
+    setSelect(found)
   }
   return (
     <div className="movies">
@@ -24,15 +24,15 @@ export default function Movies() {
       <form className="Form">
         <select onChange={handleSelect}>
           <option value=""></option>
-          {movies.map((selection) => (
-            <option key={selection.id} value={selection.id}>
+          {movies.map((movie) => (
+            <option key={movie.id} value={movie.id}>
               {" "}
-              {selection.title}
+              {movie.title}
             </option>
           ))}
         </select>
       </form>
-      <MovieDetails select={select} />
+      {select ? <MovieDetails movie={select} /> : null}
     </div>
   )
 }
