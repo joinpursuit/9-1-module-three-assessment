@@ -56,6 +56,7 @@ let sortedPlaces = tempLocData.sort((a, b) => {
   return 0
 })
 setNameSort(sortedPlaces)
+setLocationData(sortedPlaces)
 }
 function handleClimateSort(){
   const tempLocData = [...locationData]
@@ -69,6 +70,7 @@ function handleClimateSort(){
     return 0
   })
   setClimateSort(sortedPlaces)
+  setLocationData(sortedPlaces)
   }
 
   function handleTerrainSort(){
@@ -83,6 +85,7 @@ function handleClimateSort(){
       return 0
     })
     setTerrainSort(sortedPlaces)
+    setLocationData(sortedPlaces)
     }
 
 

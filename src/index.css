@@ -27,6 +27,7 @@
     background-image: url('../assets/fancyMovieBox2.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+    animation: tilt .9s infinite
  
   }
 
@@ -50,8 +51,18 @@
     background-image: url('../assets/movieActionBox.jpeg');
     background-position: no repeat;
     background-size: cover;
+    animation: tilt .9s infinite
   }
     
+  @keyframes tilt {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+
 nav {
   display: flex;
   justify-content: space-around;
