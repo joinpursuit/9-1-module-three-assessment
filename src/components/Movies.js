@@ -17,7 +17,7 @@ const Movies = ({ mov }) => {
 
   return (
     <div className="movies">
-      <label for="film">
+      <label htmlFor="film">
         <h2>Select a Movie</h2>
         <select onChange={handleChange} name="film" id="film">
           <option value=""></option>
