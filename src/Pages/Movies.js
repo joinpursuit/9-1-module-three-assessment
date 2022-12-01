@@ -13,6 +13,7 @@ export default function Movies() {
       })
       .catch((error) => console.log(error));
   }, []);
+
   const handleSelect = (e) => {
     const opts = e.target.value;
     const moviesFound = movies.find((mov) => mov.id === opts);

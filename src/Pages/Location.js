@@ -1,6 +1,6 @@
-export default function Location({ location, sorted }) {
+export default function Location({ location, sort }) {
   return (
-    <div key={location.id} className="">
+    <div key={location.id} className="detail">
       <p>
         <b>Name: </b> {location.name}
       </p>

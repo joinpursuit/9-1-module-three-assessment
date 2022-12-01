@@ -2,30 +2,63 @@ button {
   padding: 10px;
   margin-left: 20px;
 }
+.button {
+  margin-bottom: 20px;
+}
+.details {
+  background-color: lemonchiffon;
+  /* margin: 0.5em 0; */
+  align-self: center;
+  padding-right: 150px;
+  padding-left: 35px;
+  padding-bottom: 20px;
+
+  justify-content: center;
+}
 .locations {
+  /* background-color: blueviolet; */
+
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 100px;
+}
+.locations li {
+  list-style: none;
+  margin: 0.5em 0;
+  align-self: center;
+  /* border-radius: 50px; */
+}
+/* .location {
+  background: red;
   background: ghostwhite;
   padding: 1em;
   text-align: center;
-  /* min-height: 80vh; */
-}
+} */
 
-.locations > ul {
+/* .locations > ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-left: 0;
-}
+} */
 
 .locations ul > li {
-  background: lemonchiffon;
-  width: 26%;
+  padding: 50px;
+  background: ghostwhite;
+  display: flex;
+  flex-wrap: no-wrap;
+  width: 90%;
+  margin: 2em;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+  justify-content: center;
   padding: 2em;
 }
 
-.locations ul > li > ul {
+/* .locations ul > li > ul {
   margin-left: 0;
   list-style: none;
-}
+} */
 
 .locations ul > li > ul li {
   background: ghostwhite;
@@ -35,20 +68,8 @@ button {
   justify-content: center;
 }
 
-.locations ul > li > ul li span {
+/* .locations ul > li > ul li span {
   text-align: center;
   display: inline-block;
   width: 100%;
-}
-
-.details li {
-  list-style: none;
-  margin: 0.5em 0;
-  align-self: center;
-  /*  */
-  border-radius: 50px;
-}
-
-.details li span:first-child {
-  font-weight: bold;
-}
+} */

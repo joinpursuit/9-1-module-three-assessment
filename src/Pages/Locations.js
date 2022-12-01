@@ -21,7 +21,7 @@ export default function Locations() {
   const shallowCopy = [...locations];
 
   const handleSortedNames = () => {
-    setSorted(
+    setLocations(
       shallowCopy.sort((nameA, nameB) => {
         if (nameA.name.toLowerCase() < nameB.name.toLowerCase()) {
           return -1;
@@ -31,12 +31,10 @@ export default function Locations() {
         return 0;
       })
     );
-    // setLocations(sortNames);
-    // console.log("by names", sortNames);
   };
   // sort by Climate
   const handleSortedClimate = () => {
-    setSorted(
+    setLocations(
       shallowCopy.sort((climateA, climateB) => {
         if (climateA.climate.toLowerCase() < climateB.climate.toLowerCase()) {
           return -1;
@@ -48,10 +46,8 @@ export default function Locations() {
         return 0;
       })
     );
-    // setLocations(sortedClimate);
-    // console.log("Climate", sortedClimate);
   };
-  //! state not working, results are the same for both after clicking button
+
   // const comparator = (a, b) => {
   //   return a.name.toLowerCase() - b.name.toLowerCase();
   // };
@@ -59,43 +55,45 @@ export default function Locations() {
 
   //! fix the order of the buttons
   return (
-    <div className="details">
-      <h1 style={{ paddingBottom: "25px", textAlign: "center" }}>
-        List of Locations
-      </h1>
+    <div className="background">
+      {" "}
       <div className="button">
+        {" "}
+        <h1
+        // style={{ paddingBottom: "25px", textAlign: "center" }}
+        >
+          List of Locations
+        </h1>
         <button
-          // className="button"
           onClick={() => {
             setShow(!show);
           }}
         >
           {show ? "Hide Locations" : "Show Locations"}
         </button>
-        {/* //!SORT BY NAME */}
         {show ? (
           <button onClick={handleSortedNames}>Sort by Name</button>
         ) : null}
-        {/* //!SORT BY CLIMATE */}
         {show ? (
           <button onClick={handleSortedClimate}>Sort by Climate</button>
         ) : null}
       </div>
-
-      {show &&
-        locations &&
-        locations.map((location) => {
-          return (
-            <div className="locations" key={location.id}>
-              <ul>
-                <li>
-                  {" "}
-                  <Location location={location} />
-                </li>
-              </ul>
-            </div>
-          );
-        })}
+      <div className="locations">
+        {show &&
+          locations &&
+          locations.map((location) => {
+            return (
+              <div className="details" key={location.id}>
+                <ul>
+                  <li>
+                    {" "}
+                    <Location location={location} />
+                  </li>
+                </ul>
+              </div>
+            );
+          })}{" "}
+      </div>{" "}
     </div>
   );
 }
