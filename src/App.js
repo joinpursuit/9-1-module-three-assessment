@@ -8,19 +8,19 @@ import Nav from "./Components/Nav"
 
 function App() {
   return (
+    <Router>
     <div className="app">
       <h1>Welcome to GhibliApp</h1>
-      <div> <Nav /> </div>
-      <Router>
+       <Nav /> 
+     
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/people" element={<People/>} />
           <Route path="/locations" element={<Locations />} />
         </Routes>
-      </Router>
-
     </div>
+    </Router>
   );
 }
 
