@@ -1,16 +1,11 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Error({ find }) {
-  //
-  //   const [clickListener, setClickListener] = useState("");
-
+export default function Error() {
   return (
     <div className="error" style={{ textAlign: "center" }}>
       <h1 style={{ textAlign: "center", paddingTop: "50px" }}>Not Found</h1>
-      <Link to="/people">
+      <Link to="/">
         <img
-          //   onClick={!find}
           src="https://cdn.dribbble.com/users/2499518/screenshots/5032881/sbfavs_4x.jpg"
           alt="error_logo"
           style={{ height: "600px", width: "600px" }}
@@ -20,9 +15,9 @@ export default function Error({ find }) {
       <hr />
       <div className="link_path" style={{ marginLeft: "10px" }}>
         {" "}
-        <Link style={{ marginLeft: "10px" }} to="/">
+        {/* <Link style={{ marginLeft: "10px" }} to="/">
           Home
-        </Link>
+        </Link> */}
         <Link style={{ marginLeft: "10px" }} to="/movies">
           Movies
         </Link>

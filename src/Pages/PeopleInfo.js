@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function PeopleInfo({ people }) {
-  // console.log(people);
   return (
     <div className="people" style={{ lineHeight: "2" }}>
       <p>

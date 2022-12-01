@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
 import GetImages from "../ForImages";
-
+import "./ImageGenerator";
 export default function ImageGenerator({ random_index, selectedImages }) {
   const items = GetImages;
-  console.log(items);
+  // console.log(items);
 
   const mapped = items.map((img) => img.image);
   console.log(mapped);
@@ -15,14 +14,21 @@ export default function ImageGenerator({ random_index, selectedImages }) {
     //Get an Image the RandomIndex
     selectedImages = mapped[random_index];
   };
+  randomImage();
 
   return (
     <div>
       {" "}
-      <span className="">
-        <button>Next</button> {<img src={selectedImages} alt={mapped.name} />}{" "}
-        images shows here
-        <button>Next</button>
+      <span className="pointer">
+        {
+          <img
+            onClick={() => {
+              window.location.reload();
+            }}
+            src={selectedImages}
+            alt={selectedImages.name}
+          />
+        }
       </span>
     </div>
   );

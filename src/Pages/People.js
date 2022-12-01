@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import PeopleInfo from "./PeopleInfo";
 import Error from "./Error";
-export default function People() {
+export default function People({ selectedImages, movie }) {
   const [people, setPeople] = useState([]);
   const [search, setSearch] = useState("");
   const [name, setName] = useState("");
@@ -52,7 +52,10 @@ export default function People() {
           <PeopleInfo people={search} />
         </section>
       )}
-      <div> {!find ? <Error /> : null}</div>
+      <div>
+        {" "}
+        {!find ? <Error selectedImages={selectedImages} movie={movie} /> : null}
+      </div>
     </div>
   );
 }
