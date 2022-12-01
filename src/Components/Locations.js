@@ -19,7 +19,9 @@ export default function Locations(){
         })
     }, [])
 
-    
+    function handleSort(sorts){
+        setLocations([...sorts])
+    }
     
   
     function sortName(){
@@ -35,6 +37,7 @@ export default function Locations(){
             </ul>
             )
         })
+        handleSort(sn)
     
     }
 
@@ -55,7 +58,7 @@ function sortClimate(){
         </ul>
         )
     })
-    
+    handleSort(sc)
 }
 
 
@@ -73,7 +76,7 @@ function sortTerrain(){
         </ul>
         )
     })
- 
+    handleSort(st)
 }
 
     return(

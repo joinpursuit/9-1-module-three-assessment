@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Navigate.css"
 
-
-
 export default function Navigate(){
     return(
         <header>
