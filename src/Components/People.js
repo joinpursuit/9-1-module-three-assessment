@@ -46,6 +46,7 @@ const peopleData = 'people.json'
             {input.id ? (
                 <div>
                     <h3 className="character">Name: {input.name}</h3>
+                    <p className="gender"><span style={{fontWeight: "bold"}}>Gender:</span> {input.gender}</p>
                     <p className="age"><span style={{fontWeight: "bold"}}>Age:</span> {input.age}</p>
                     <p className="eyes"> <span style={{fontWeight: "bold"}}>Eye Color:</span> {input.eye_color}</p>
                     <p className="hair"> <span style={{fontWeight: "bold"}}>Hair Color:</span> {input.hair_color}</p>
