@@ -5,7 +5,7 @@ const People = () => {
   const [data, setData] = useState([]);
   const [personInfo, setPersonInfo] = useState([]);
   const [inputBox, setInputBox] = useState("");
-  const [error, setError] = useState(false);
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     fetch("../people.json")
@@ -22,12 +22,22 @@ const People = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setError(false);
-    if (inputBox.length === 0) setError(true);
-    const foundPerson = data?.find(
-      (person) => person.name.toLowerCase() === inputBox.toLowerCase()
-    );
-    setPersonInfo(foundPerson || []);
+    setPersonInfo([]);
+
+    if (inputBox.length === 0) {
+      setMessage("You must enter a name to search, please try again...");
+    }
+
+    if (inputBox.length > 0) {
+      data?.find((person) => {
+        if (person.name.toLowerCase() === inputBox.toLowerCase()) {
+          setPersonInfo(person || []);
+        } else {
+          setMessage("Sorry, no match found, please try again...");
+        }
+      });
+    }
+
     setInputBox("");
   };
 
@@ -38,7 +48,27 @@ const People = () => {
         <input type="text" value={inputBox} onChange={handleInput}></input>
         <button type="submit">Sumbit</button>
         <hr />
-        {error ? <div className="error">You must enter a name!</div> : null}
+
+        {personInfo.length !== 0 ? (
+          <div className="person-info">
+            <h2>{personInfo.name}</h2>
+
+            <p>
+              <strong>Age:</strong>
+              {personInfo.age}
+            </p>
+            <p>
+              <strong>Eye Color: </strong>
+              {personInfo.eye_color}
+            </p>
+            <p>
+              <strong>Age: </strong>
+              {personInfo.hair_color}
+            </p>
+          </div>
+        ) : (
+          message
+        )}
       </form>
     </div>
   );
