@@ -10,21 +10,20 @@ export default function People () {
 
     useEffect(() => {
         fetch('people.json', {
-    method: 'GET',
-    headers: { 'Accept': 'application/json', },
-    })
+            method: 'GET',
+        })
         .then(res => res.json())
         .then(people => setPeople((people))
-        .catch((err) => {
-            setLoadingError(true)
-    }
+        .catch((error) => {
+            console.log(error)
+        }
     ))
         }, [])
 
     const handleSubmit = (e) => {
         e.preventDefault()
         const found = people.find(each => each.name.toLowerCase() === name.toLowerCase())
-        setInput(found || {})
+        setInput(found || setLoadingError(true))
         setName()
     }
 
