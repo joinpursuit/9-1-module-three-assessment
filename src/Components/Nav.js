@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-// import wonderWomanLionness from "../../assets/wonderWomanLionness.png"
+import wonderWomanLionness from "../wonderWomanLionness.png"
 
 export default function Nav() {
 
@@ -8,7 +8,7 @@ export default function Nav() {
   return (
     <div>
         <nav>
-          {/* <img src="myIcon"></img> */}
+          <img className="wonderWoman" src={wonderWomanLionness} alt="wonder woman"/> 
             <Link className='homePage' to="/">Home</Link>
             <Link className='moviesPage' to="/movies">Movies</Link>
             <Link className='peoplePage' to="/people">People</Link>
