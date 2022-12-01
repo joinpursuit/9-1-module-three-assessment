@@ -12,11 +12,17 @@ function Locations(props) {
 
     // function for sorting
     function sortBy(value) {
+        // create arr with values for inputted value (`climate` => [continental, dry, mild, TODO, tropical])
+        const keyValues = []
+        locations.forEach(obj => {
+            if(!keyValues.includes(obj[`${value}`]))
+            keyValues.push(obj[`${value}`])
+        })
         // return array of objects with value and idValue key for inputted value
         const sortArr = locations.map(obj => {
            return {value: obj[`${value}`], idValue: obj.id}
             }) 
-        // sort arr of objects by value key alphabetically (comparison using sort 1,-1,0)
+            // sort arr of objects by value key alphabetically (comparison using sort 1,-1,0)
             // a<b -1, a>b 1, else 0
         sortArr.sort((a,b) => 
             // if a<b return -1, else return 1 OR return 0
@@ -26,7 +32,24 @@ function Locations(props) {
         sortArr.forEach(({idValue}, i ) => 
           sortArr[i] = locations.find(({id}) => id === idValue)
         )
-        setSorted(sortArr) 
+        // sort sortArr objects by keyValues alphabetically => each location with `continental` => sort those alphabetically, then list the 'dry' alphabetically, etc...
+        // first forEach key Value create sep. array for objects with matching value (all contitnentals in one array)
+         const sortArr2 = keyValues.sort().map((el)=>{
+            const filter = sortArr.filter(obj => obj[`${value}`] === el 
+            ) 
+            return filter
+        })
+        // sort each array in sortArr2, by name key alphabetically
+        sortArr2.forEach(el => el.sort((a,b) => 
+        // if a<b return -1, else return 1 OR return 0
+        a.name < b.name ? -1 : 1 || 0
+         ) )
+        //  concat all arrays inside of sortArr2 using reduce to return 1 array [ [], [], [], ] -> []
+        const finalArr = sortArr2.reduce((acc, arr) =>
+        acc.concat(arr)
+       , []);
+
+        setSorted(finalArr) 
     }
 
     let arr = sorted.length ? sorted : locations
@@ -36,7 +59,7 @@ function Locations(props) {
         .then(respJson => setLocations(respJson))
         .catch(err => console.log(err))
     }, [])
-    
+
     return (
         <div className="locations">
           <h2>List of Locations</h2> 
