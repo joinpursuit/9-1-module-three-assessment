@@ -45,7 +45,7 @@ const People = () => {
       <h1>Search for a Person</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" value={inputBox} onChange={handleInput}></input>
-        <button type="submit">Sumbit</button>
+        <button type="submit">Submit</button>
         <hr />
 
         {personInfo.length !== 0 ? (
@@ -55,6 +55,10 @@ const People = () => {
             <p>
               <strong>Age:</strong>
               {personInfo.age}
+            </p>
+            <p>
+              <strong>Gender: </strong>
+              {personInfo.gender}
             </p>
             <p>
               <strong>Eye Color: </strong>
