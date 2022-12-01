@@ -20,14 +20,88 @@ useEffect(() => {
 },[])
 
 
+// function handleNameSort(){
+//   const tempLocData = [...locationData]
+//   let sortedPlaces =tempLocData.sort((a,b) => {
+//     a.name < b.name ?  -1 : a.name > b.name ? 1 : 0
+//   })
+//   setNameSort(sortedPlaces)
+// }
+// function handleClimateSort(){
+//   const tempLocData = [...locationData]
+//   let sortedPlaces =tempLocData.sort((a,b) => {
+//     a.climate < b.climate ?  -1 : a.climate > b.climate ? 1 : 0
+//   })
+//   setClimateSort(sortedPlaces)
+// }
+
+// function handleTerrainSort(){
+//   const tempLocData = [...locationData]
+//   let sortedPlaces =tempLocData.sort((a,b) => {
+//     a.terrain < b.terrain ?  -1 : a.terrain > b.terrain ? 1 : 0
+//   })
+//   setTerrainSort(sortedPlaces)
+// }
+
+
+function handleNameSort(){
+const tempLocData = [...locationData]
+let sortedPlaces = tempLocData.sort((a, b) => {
+  if (a.name < b.name) {
+      return -1
+  }
+  if (a.name > b.name) {
+      return 1
+  }
+  return 0
+})
+setNameSort(sortedPlaces)
+}
+function handleClimateSort(){
+  const tempLocData = [...locationData]
+  let sortedPlaces = tempLocData.sort((a, b) => {
+    if (a.climate < b.climate) {
+        return -1
+    }
+    if (a.climate > b.climate) {
+        return 1
+    }
+    return 0
+  })
+  setClimateSort(sortedPlaces)
+  }
+
+  function handleTerrainSort(){
+    const tempLocData = [...locationData]
+    let sortedPlaces = tempLocData.sort((a, b) => {
+      if (a.terrain < b.terrain) {
+          return -1
+      }
+      if (a.terrain > b.terrain) {
+          return 1
+      }
+      return 0
+    })
+    setTerrainSort(sortedPlaces)
+    }
+
+
+
 return (
   <div className="locations">
     <h1>List of Locations</h1>
     <button onClick={() => setShowLocation(!showLocation)}>{showLocation ? "Hide" : "Show"}</button>
-    <button onClick={() => setNameSort(!nameSort)}>{nameSort ? "Hide" : "Show"}</button>
-    <button onClick={() => setClimateSort(!climateSort)}>{climateSort ? "Hide" : "Show"}</button>
-    <button onClick={() => setTerrainSort(!terrainSort)}>{terrainSort ? "Hide" : "Show"}</button>
-    <ul>
+    
+    { showLocation ? 
+    <>
+    <button onClick={handleNameSort}>Sort By Name</button>
+    <button onClick={handleClimateSort}>Sort By Climate</button>
+    <button onClick={handleTerrainSort}>Sort By Terrain</button>
+    </>
+    :
+    null}
+
+   <ul>
       {showLocation &&
       locationData &&
       locationData.map(locale =>(
@@ -38,10 +112,6 @@ return (
         </li>
       ))}
     </ul>
-    
-  
   </div>
-)
-
-  
+) 
 }
