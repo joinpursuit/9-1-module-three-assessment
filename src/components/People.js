@@ -52,7 +52,7 @@ const People = ({ pers }) => {
           </h4>
         </div>
       )) ||
-        (search && (
+        (person === undefined && (
           <div>
             {" "}
             <h4>
