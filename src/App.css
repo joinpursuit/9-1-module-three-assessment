@@ -39,3 +39,21 @@
 .form {
   text-align: center;
 }
+.locations {
+  text-align: center;
+}
+.li {
+  list-style: none;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+}
+.cardUl {
+  text-align: center;
+  display: grid;
+  align-items: center;
+  width: 250px;
+  padding: 10px;
+  margin: 5px;
+  background-color: lemonchiffon;
+}

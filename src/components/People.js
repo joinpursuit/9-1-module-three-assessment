@@ -12,9 +12,9 @@ const People = ({ pers }) => {
     setperson(pers.find((f) => f.name === search));
   }
 
-  console.log(search);
-  console.log(person);
-  console.log(pers);
+  // console.log(search);
+  // console.log(person);
+  // console.log(pers);
 
   return (
     <div className="people">
