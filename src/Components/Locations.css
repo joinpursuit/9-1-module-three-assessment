@@ -1,0 +1,47 @@
+.location_card {
+  /* display: block;
+  justify-content: center;
+  align-items: center; */
+  width: 80%;
+  height: 80%;
+  background-color: rgb(195, 224, 221);
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.location_card > ul {
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  background-color: rgb(251, 246, 246);
+  border-radius: 10px;
+  border: solid 1px rgb(192, 216, 216);
+  box-shadow: 10px 5px 5px rgb(0 0 0 / 10%);
+}
+.location_button {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background-color: rgb(245, 245, 245);
+  color: rgb(6, 6, 6);
+}
+
+.location_button:active {
+  background-color: rgb(225, 213, 213);
+  border: 3px solid;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.button_holder {
+  display: flex;
+  justify-content: center;
+  margin: 8px;
+}

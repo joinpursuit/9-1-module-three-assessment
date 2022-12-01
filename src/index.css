@@ -70,8 +70,8 @@ li {
 }
 
 .locations ul > li {
-  background: lemonchiffon;
-  width: 26%;
+  /* background: lemonchiffon;
+  width: 26%; */
   padding: 2em;
 }
 
