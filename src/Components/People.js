@@ -1,12 +1,12 @@
 import React from 'react'
-import {useEffect, useState, useParams} from "react"
+import {useEffect, useState} from "react"
 
 export default function People() {
 
 
 const[peopleData, setPeopleData] =useState([])
-const[thisPerson, setThisPerson] =useState({})
-
+const[personSearchInput, setPersonSearchInput] =useState({})
+const [personName, setPersonName] = useState("")
 //allows asynchronous fetching
 useEffect(() => {
   fetch('people.json')
@@ -16,40 +16,46 @@ useEffect(() => {
 )
 },[])
 
-const handleSelection = (e) =>{
-  const selectedPerson = e.target.value
-  const foundPerson = peopleData.find((person) => person.id === selectedPerson)
-  setThisPerson(foundPerson || {})
-}
+const handleSubmit = (e) =>{
+  e.preventDefault()
+  // const selectedPerson = e.target.value
+  const foundPerson = peopleData.find((person) => person.name.toLowerCase() === personName.toLowerCase())
+    setPersonSearchInput(foundPerson || {})
+    resetForm()
+  }
+  function resetForm(){
+    setPersonName("")
+  }
 
 return (
-  <>
+
   <div className='people'>
-    <h2 className='peopleListHeading'>Search for a Person</h2><br/>
-    <div className='peopleList'>
-    <select onChange={handleSelection}>
-      <option value=''></option>
-      {peopleData.map(person =>( 
-          <option key={person.id} value={person.id}>
-              {person.name}
-          </option>
-      ))}
-    </select><br/>
-    <br/> <br/>
-    {thisPerson.id && (
-      <div className='personBox'>
-        <div className='personInfo'>
-          <div className='personTitleDiv'>
-          <h2 className='personName'>Name:</h2><span>{thisPerson.name}</span> 
-          <span className='personAge'>{thisPerson.age}</span> </div><br/>
-          <div><h4 className='personGender'> Gender:</h4><span>{thisPerson.gender}</span></div>
-          <p className='personEyeColor'>{thisPerson.eye_color}</p>
-          <p className='personEyeColor'>{thisPerson.hair_color}</p>
-        </div>
-      </div>
-    )}
+         <h2 className='peopleListHeading'>Search for a Person</h2><br/>
+
+<form onSubmit={handleSubmit}>
+  <label htmlFor="personName">
+    <input
+      value={personName}
+      onChange={(e) => {
+        setPersonName(e.target.value)
+      }}
+      type="text"
+      placeholder ='Please enter a Name,e.g "Pazu", "Duffi"'
+    />
+  </label>
+  <button type="submit">Submit</button>
+</form>
+
+  {personSearchInput.id && (
+    <div className='inputBox'>   
+          <p><strong>Name:</strong></p> <span>{personSearchInput.name}</span>
+          <p><strong>Age: </strong>       {personSearchInput.age}</p>
+          <p><strong>Gender:</strong>     {personSearchInput.gender}</p>
+          <p><strong>Eye Color:</strong>  {personSearchInput.eye_color}</p>
+          <p><strong>Hair Color: </strong>{personSearchInput.hair_color}</p>
     </div>
-  </div>
-</>
-)
+  )}
+
+   </div>
+ )
 }
