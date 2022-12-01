@@ -41,26 +41,27 @@ li {
   background: ghostwhite;
   padding: 1em;
   min-height: 80vh;
-  justify-content: space-between;
-  margin-left: 0;
 }
+
 
 .locations > ul {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row ;
   justify-content: space-between;
+  margin-bottom: 5%;
   margin-left: 0;
-  margin-right: 5em;
 }
+
 
 
 .locations ul > li {
   background: lemonchiffon;
   width: 100%;
   padding: 2em;
-  margin-bottom: 5%;
-  /* margin-left: 5%; */
-  justify-content: center;
+  margin-bottom:10px;
+  list-style-position: inside;
+
 }
 
 .locations ul > li > ul {
@@ -71,15 +72,17 @@ li {
 .locations ul > li > ul li {
   background: ghostwhite;
   display: flex;
+  flex-direction: column;
   flex-wrap: no-wrap;
-  width: 70%;
+  width: 90%;
+  padding: 10%;
   justify-content: center;
 }
 
 .locations ul > li > ul li span {
   text-align: center;
   display: inline-block;
-  /* width: 100%; */
+  width: 100%;
 }
 
 .details li {
@@ -128,12 +131,12 @@ li {
   padding: 1em;
 }
 
-ul li::marker {
+ ul li::marker {
   font-size: 150%;
   color: #517e94;
   opacity: 0;
+ 
 }
-
 
 .search input{
   background: rgba(255, 255, 255, 0.665);
