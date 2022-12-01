@@ -32,7 +32,7 @@ export default function Movies() {
         ))}
       </select>
       {selected.id && (
-        <section className="selected" style={{ textAlign: "center" }}>
+        <section className="selected">
           <Movie movie={selected} />
         </section>
       )}

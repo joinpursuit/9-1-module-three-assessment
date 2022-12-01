@@ -1,0 +1,40 @@
+.Locations {
+  border: 1px solid black;
+}
+.locations {
+  background: ghostwhite;
+  padding: 1em;
+  /* min-height: 80vh; */
+}
+
+.locations > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 0;
+}
+
+.locations ul > li {
+  background: lemonchiffon;
+  width: 26%;
+  padding: 2em;
+}
+
+.locations ul > li > ul {
+  margin-left: 0;
+  list-style: none;
+}
+
+.locations ul > li > ul li {
+  background: ghostwhite;
+  display: flex;
+  flex-wrap: no-wrap;
+  width: 90%;
+  justify-content: center;
+}
+
+.locations ul > li > ul li span {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
