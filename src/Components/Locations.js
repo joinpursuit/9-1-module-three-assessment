@@ -17,8 +17,8 @@ const Locations = () => {
             }) 
     },[])
 
-    function handleSort(sorts) {
-        setLocation([...sorts])
+    function sortBy(name) {
+        setLocation([...name])
     }
 
     function nameSort() {
@@ -34,7 +34,7 @@ const Locations = () => {
                 </ul>
             )
         })
-        handleSort(sortByName)
+        sortBy(sortByName)
     }
 
     function ClimateSort() {
@@ -50,7 +50,7 @@ const Locations = () => {
                 </ul>
             )
         })
-        handleSort(sortByClimate)
+        sortBy(sortByClimate)
     }
 
     function TerrainSort() {
@@ -66,7 +66,7 @@ const Locations = () => {
                 </ul>
             )
         })
-        handleSort(sortByTerrain)
+        sortBy(sortByTerrain)
     }
 
     return (
