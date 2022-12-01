@@ -12,18 +12,38 @@ const Locations = () => {
       });
   }, []);
 
+  const showLocations = () => {
+    setShow(!show);
+  };
+
+  const sortData = (btnE) => {
+    const mapData = data.slice().sort((a, b) => (a[btnE] > b[btnE] ? 1 : -1));
+    setData(mapData);
+  };
+
+  const handleClick = (e) => {
+    let btnE = `${e.target.value}`;
+    sortData(btnE);
+  };
+
   return (
     <div className="locations">
       <h1>List of Locations</h1>
-      <button onClick={() => setShow(!show)}>
+      <button onClick={showLocations}>
         {!show ? "Show Locations" : "Hide Locations"}
       </button>
       {show ? (
         <>
           {" "}
-          <button>Sort Locations by Name</button>
-          <button>Sort Locations by Climate</button>
-          <button>Sort Locations by Terrain</button>
+          <button value="name" onClick={handleClick}>
+            Sort Locations by Name
+          </button>
+          <button value="climate" onClick={handleClick}>
+            Sort Locations by Climate
+          </button>
+          <button value="terrain" onClick={handleClick}>
+            Sort Locations by Terrain
+          </button>
         </>
       ) : null}
 
