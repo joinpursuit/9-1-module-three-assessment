@@ -19,7 +19,7 @@ nav img {
   border-radius: 50%;
 }
 
-main {
+main, input {
   margin-top: 1em;
   text-align: center;
 }
@@ -95,6 +95,7 @@ li {
   width: 80%;
   min-height: 50%;
   margin: auto;
+  text-align: center;
 }
 
 .people aside h3 {
@@ -123,4 +124,22 @@ ul li::marker {
   font-size: 150%;
   color: #517e94;
   opacity: 0;
+}
+
+
+.search input{
+  background: rgba(255, 255, 255, 0.665);
+  border-radius: 20px 0px 0px 20px;;
+  flex: 1;
+  outline: none; 
+}
+
+.search button{
+  border-radius: 0px 20px 20px 0px;
+  color: #517e94;
+  background:black;
+}
+
+.search button:hover{
+  background: rgba(255, 255, 255, 0.665);
 }
