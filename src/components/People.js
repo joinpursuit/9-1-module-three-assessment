@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./People.css";
 
 const People = () => {
   const [data, setData] = useState([]);

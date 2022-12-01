@@ -39,6 +39,8 @@ li {
   background: ghostwhite;
   padding: 1em;
   min-height: 80vh;
+  text-align: center;
+  
 }
 
 .locations > ul {
@@ -86,6 +88,7 @@ li {
   background: lemonchiffon;
   height: 80vh;
   padding-top: 1em;
+  text-align: center;
 }
 
 .people aside {
@@ -108,6 +111,8 @@ li {
   padding-top: 1em;
   height: 80vh;
   background: #d7f0f2;
+  text-align: center;
+  
 }
 
 .movies aside {
