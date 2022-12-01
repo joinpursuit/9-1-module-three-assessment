@@ -34,7 +34,7 @@ const Movies = ({ mov }) => {
           </h3>
           <h3>
             <strong className="movie_Header">Release Date: </strong>
-            {filmSelect.running_time}
+            {filmSelect.release_date}
           </h3>
           <h3>
             <strong className="movie_Header">Description: </strong>
