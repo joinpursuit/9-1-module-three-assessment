@@ -1,5 +1,5 @@
 import React from 'react'
-import {useEffect, useState, useParams} from "react"
+import {useEffect, useState} from "react"
 
 export default function Locations() {
 
@@ -96,9 +96,10 @@ return (
     
     { showLocation ? 
     <>
-    <button onClick={handleNameSort}>Sort By Name</button>
-    <button onClick={handleClimateSort}>Sort By Climate</button>
-    <button onClick={handleTerrainSort}>Sort By Terrain</button>
+    <br/>
+    <button className='nameSortBtn' onClick={handleNameSort}>Sort By Name</button>
+    <button className='climateSortBtn'onClick={handleClimateSort}>Sort By Climate</button>
+    <button className='terrainSortBtn'onClick={handleTerrainSort}>Sort By Terrain</button>
     </>
     :
     null}
@@ -107,7 +108,7 @@ return (
       {showLocation &&
       locationData &&
       locationData.map(locale =>(
-        <li classname locationBox key={locale.id}>
+        <li className locationBox key={locale.id}>
          <p className='name'><strong>Name:</strong><span className="localeSpan">{locale.name}</span></p>
          <p className='climate'><strong>Climate:</strong><span className="localeSpan" > {locale.climate}</span></p>
          <p className='terrain'><strong>Terrain:</strong><span className="localeSpan"  >{locale.terrain}</span></p>

@@ -169,6 +169,17 @@ li {
   font-weight: bold;
 }
 
+.peopleInputField{
+  margin-left:45.5em;
+}
+.nameSortBtn,
+.climateSortBtn,
+.terrainSortBrn{
+  margin: 1em 1em 1em 1em;
+}
+.nameSortBtn{
+  margin-left:38em;
+}
 .movies {
   padding-top: 1em;
   height: 80vh;

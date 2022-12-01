@@ -35,6 +35,7 @@ return (
 <form onSubmit={handleSubmit}>
   <label htmlFor="personName">
     <input
+     className='peopleInputField'
       value={personName}
       onChange={(e) => {
         setPersonName(e.target.value)
