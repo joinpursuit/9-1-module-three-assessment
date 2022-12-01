@@ -146,7 +146,7 @@ li {
 .movies aside {
   background: rgba(240, 248, 255, 0.522);
   width: 50%;
-  max-height: 50%;
+  max-height: 100%;
   margin: auto;
   margin-top: 1em;
   border-radius: 20px;
