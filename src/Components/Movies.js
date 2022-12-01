@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { ContextData } from "../Provider";
+import { ContextData } from "./Provider";
 import Dropdown from "./Dropdown";
 import './Movies.css'
 

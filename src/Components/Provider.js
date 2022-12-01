@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
-import Footer from "./Components/Footer";
-import Nav from "./Components/Nav";
-import { fetchData } from "./Functions/fetch";
+import Footer from "./Footer";
+import Nav from "./Nav";
+import { fetchData } from "../Functions/fetch";
 
 // Declare variable for data consumption
 export const ContextData = createContext()

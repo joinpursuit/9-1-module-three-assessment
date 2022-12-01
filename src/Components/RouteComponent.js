@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./Components/Home";
-import Movies from "./Components/Movies";
-import People from "./Components/People";
-import Locations from "./Components/Locations";
+import Home from "./Home";
+import Movies from "./Movies";
+import People from "./People";
+import Locations from "./Locations";
 
 function RouteComponent(props) {
     return (

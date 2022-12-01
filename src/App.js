@@ -1,5 +1,5 @@
-import Provider from "./Provider";
-import RouteComponent from "./RouteComponent";
+import Provider from './Components/Provider';
+import RouteComponent from './Components/RouteComponent';
 import './App.css'
 
 function App() {
