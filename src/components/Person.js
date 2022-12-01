@@ -1,16 +1,13 @@
 export default function Person({ person }) {
   return (
-    <div>
+    <aside>
       <h3>Name: {person.name}</h3>
       <p>
-        <strong>Age:</strong> {person.age}
+        <span>Age:</span> {person.age}
       </p>
       <p>
-        <strong>Eye Color:</strong> {person.eye_color}
+        <span>Gender:</span> {person.gender}
       </p>
-      <p>
-        <strong>Hair Color:</strong> {person.hair_color}
-      </p>
-    </div>
+    </aside>
   );
 }

@@ -1,19 +1,25 @@
 import { useEffect, useState } from "react";
-
 import { get } from "../api/fetch";
-
 import Person from "./Person";
 
 export default function People() {
   const [people, setPeople] = useState([]);
-  const [person, setPerson] = useState({});
+  const [person, setPerson] = useState(undefined);
   const [textInput, setTextInput] = useState("");
+  const [notFound, setNotFound] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
-    setPerson(
-      people.find((person) => person.name.toLocaleLowerCase() === textInput)
+
+    //
+    const chosenPerson = people.find(
+      (person) => person.name.toLocaleLowerCase() === textInput
     );
+    if (!chosenPerson) {
+      setNotFound(true);
+    } else setNotFound(false);
+    setPerson(chosenPerson);
+
     setTextInput("");
   }
 
@@ -24,7 +30,7 @@ export default function People() {
   }, []);
 
   return (
-    <div className="people">
+    <section className="people">
       <h2>Search for a Person</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="textInput">
@@ -37,11 +43,13 @@ export default function People() {
         </label>
         <button>Submit</button>
       </form>
-      {Object.keys(person) === 0 ? (
+      {!person && notFound ? (
+        <p>"Not Found"</p>
+      ) : person ? (
         <Person person={person} />
       ) : (
-        <p>"Not Found"</p>
+        ""
       )}
-    </div>
+    </section>
   );
 }
