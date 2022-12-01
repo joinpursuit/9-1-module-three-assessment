@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './Movie.css';
 export default function Movies({ data, setData, input, setInput }) {
   const handleChoice = (e) => {
     const chosen = e.target.value;
-    console.log(chosen);
     const found = data.find((movie) => movie.id === chosen);
     setInput(found || {});
   };
@@ -11,7 +10,6 @@ export default function Movies({ data, setData, input, setInput }) {
     fetch('/films.json')
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setData(data);
       })
       .catch((err) => console.log(err));
@@ -30,9 +28,9 @@ export default function Movies({ data, setData, input, setInput }) {
         </select>
         {input.id && (
           <div>
-            <p>
-              <h2>Title: {input.title}</h2>
-            </p>
+            <br></br>
+            <h2>Title: {input.title}</h2>
+
             <p>
               <b>Release Date:</b>
               {input.release_date}

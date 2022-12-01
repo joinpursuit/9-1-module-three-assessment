@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './People.css';
 export default function People({
   data,
@@ -21,7 +21,6 @@ export default function People({
     fetch('/people.json')
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setData(data);
       })
       .catch((err) => console.log(err));
