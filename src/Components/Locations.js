@@ -89,8 +89,10 @@ function handleClimateSort(){
 
 return (
   <div className="locations">
-    <h1>List of Locations</h1>
-    <button onClick={() => setShowLocation(!showLocation)}>{showLocation ? "Hide" : "Show"}</button>
+    <h1 className='locationsHdg'>List of Locations</h1>
+    <button 
+    className='showHideBtn'
+    onClick={() => setShowLocation(!showLocation)}>{showLocation ? "Hide" : "Show"}</button>
     
     { showLocation ? 
     <>

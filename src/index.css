@@ -256,6 +256,18 @@ li{
   text-align: center;
 }
 
+
+.locationsHdg{
+  /* margin: 0 auto; */
+  margin-left: 18.2em;
+}
+
+.showHideBtn{
+  height: 2em;
+  margin-left: 50em;
+
+}
+
 .locationBox {
   text-align: center;
   display: grid;
