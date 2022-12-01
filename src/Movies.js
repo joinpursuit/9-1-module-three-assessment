@@ -29,11 +29,11 @@ export default function Movies({allMovies}) {
     </select>
 
     {single.id && (
-        <div>
-            <h3>Title: {single.title}</h3>
-            <p>Release Date: {single.release_date}</p>
-            <p>Details: {single.description}</p>
-        </div>
+        <aside>
+            <p><span>Title: </span>{single.title}</p>
+            <p><span>Release Date: </span>{single.release_date}</p>
+            <p><span>Description: </span>{single.description}</p>
+        </aside>
         )
     }
 

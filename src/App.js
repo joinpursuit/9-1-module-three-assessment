@@ -10,6 +10,8 @@ import People from "./People";
 function App() {
 
   const [allMovies,setMovies]=useState([]);
+  const [allLocations,setLocations]=useState([]);
+  const [allPeople,setPeople]=useState([]);
 
   const getMovies=()=>{
     fetch('films.json'
@@ -29,8 +31,50 @@ function App() {
         setMovies(movies)
       });
   }
+
+  const getPeople=()=>{
+    fetch('people.json'
+    ,{
+      headers : { 
+        'Content-Type': 'people/json',
+        'Accept': 'people/json'
+       }
+    }
+    )
+      .then(function(response){
+        // console.log(response)
+        return response.json();
+      })
+      .then(function(people) {
+        // console.log(movies);
+       setPeople(people)
+      });
+  }
+
+  const getLocations=()=>{
+    fetch('locations.json'
+    ,{
+      headers : { 
+        'Content-Type': 'locations/json',
+        'Accept': 'locations/json'
+       }
+    }
+    )
+      .then(function(response){
+        // console.log(response)
+        return response.json();
+      })
+      .then(function(locations) {
+        console.log(locations);
+       setLocations(locations)
+      });
+  }
+
+
   useEffect(()=>{
     getMovies()
+    getLocations()
+    getPeople()
   },[])
 
 
@@ -44,9 +88,9 @@ function App() {
         <Routes>
 
           <Route path='/' element={<Home/>}/>
-          <Route path='/locations' element={<Locations/>}/>
+          <Route path='/locations' element={<Locations allLocations={allLocations}/>}/>
           <Route path='/movies' element={<Movies allMovies={allMovies}/>}/>
-          <Route path='/people' element={<People/>}/>
+          <Route path='/people' element={<People allPeople={allPeople}/>}/>
   
         </Routes>
       </Router>
