@@ -5,6 +5,8 @@ export default function Locations() {
   const [locations, setLocations] = useState([]);
   const [initialSort, setInitialSort] = useState([]);
   const [buttonVal, setButtonVal] = useState("Show");
+  const [nameOrien, setNameOrien] = useState("ASC");
+  const [climateOrien, setClimateOrien] = useState("ASC");
 
   useEffect(() => {
     fetch("locations.json")
@@ -20,34 +22,46 @@ export default function Locations() {
     buttonVal === "Show" ? setButtonVal("Hide") : setButtonVal("Show");
   };
 
-  const sortBy = (val) => {
+  const sortBy = (val, orien = "", setOrien = () => {}) => {
     // console.log("sort", val);
-    if (val !== "reset") {
-      setLocations([
-        ...locations.sort((a, b) => {
-          const valA = a[val].toUpperCase();
-          const valB = b[val].toUpperCase();
-          if (valA < valB) {
-            return -1;
-          }
-          if (valA > valB) {
-            return 1;
-          }
-          return 0;
-        }),
-      ]);
-    }
-    if (val === "reset") {
-      setLocations([...initialSort]);
-    }
+    val !== "reset"
+      ? setLocations([
+          ...locations.sort((a, b) => {
+            const valA = a[val].toUpperCase();
+            const valB = b[val].toUpperCase();
+            if (orien === "ASC") {
+              if (valA < valB) {
+                return -1;
+              }
+              if (valA > valB) {
+                return 1;
+              }
+              return 0;
+            } else {
+              if (valA > valB) {
+                return -1;
+              }
+              if (valA < valB) {
+                return 1;
+              }
+              return 0;
+            }
+          }),
+        ])
+      : setLocations([...initialSort]);
+    orien === "ASC" ? setOrien("DESC") : setOrien("ASC");
   };
 
   return (
     <div className="locations">
       <h2>List of Locations</h2>
       <button onClick={handleClick}>{buttonVal} Locations</button>
-      <button onClick={() => sortBy("name")}>Sort by Name</button>
-      <button onClick={() => sortBy("climate")}>Sort by Climate</button>
+      <button onClick={() => sortBy("name", nameOrien, setNameOrien)}>
+        Sort by Name ({nameOrien})
+      </button>
+      <button onClick={() => sortBy("climate", climateOrien, setClimateOrien)}>
+        Sort by Climate ({climateOrien})
+      </button>
       <button onClick={() => sortBy("reset")}>Reset Sorting</button>
       <ul>
         {buttonVal === "Hide" &&
