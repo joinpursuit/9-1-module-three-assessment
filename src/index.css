@@ -1,10 +1,14 @@
+* {
+  text-align: center;
+  margin: auto;
+  font-family: 'Ghibli', sans-serif;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
-  background: #517e94;
+  background: #00acef;
   padding: 1em;
-  margin-bottom: 2em;
-  font-family: sans-serif;
 }
 
 nav a {
@@ -13,8 +17,13 @@ nav a {
   color: white;
 }
 
+nav a:hover {
+  color: #eb7786;
+}
+
 nav img {
   height: 50px;
+  width: 50px;
 }
 
 main {
@@ -28,7 +37,6 @@ h2 {
   width: 90%;
   margin: auto;
   text-align: center;
-  font-family: sans-serif;
 }
 
 li {
@@ -36,9 +44,9 @@ li {
 }
 
 .locations {
-  background: ghostwhite;
+  background: #8282f145;
   padding: 1em;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 .locations > ul {
@@ -49,9 +57,13 @@ li {
 }
 
 .locations ul > li {
-  background: lemonchiffon;
-  width: 26%;
+  background: rgb(223, 188, 242);
+  width: 25%;
   padding: 2em;
+  margin-bottom: 30px;
+  list-style: none;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.336);
 }
 
 .locations ul > li > ul {
@@ -63,15 +75,33 @@ li {
   background: ghostwhite;
   display: flex;
   flex-wrap: no-wrap;
-  width: 90%;
+  width: 75%;
   justify-content: center;
+  padding: 30px;
+  margin: 20px;
+  margin-left: -10px;
+  border-radius: 20px;
+  border: 3px rgb(198, 157, 198) dashed;
 }
+
 
 .locations ul > li > ul li span {
   text-align: center;
   display: inline-block;
   width: 100%;
+
 }
+
+.locations strong {
+  padding-right: 10px;
+  margin: 0;
+}
+
+.locations button {
+  margin: 5px;
+  margin-bottom: 20px;
+}
+
 .details li {
   list-style: none;
   margin: 0.5em 0;
@@ -84,15 +114,18 @@ li {
 
 .people {
   background: lemonchiffon;
-  height: 80vh;
+  height: 100vh;
   padding-top: 1em;
 }
 
 .people aside {
-  background: ghostwhite;
-  width: 80%;
-  min-height: 50%;
+  background: rgba(248, 248, 255, 0.522);
+  width: 50%;
+  max-height: 100%;
   margin: auto;
+  margin-top: 20px ;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.336)
 }
 
 .people aside h3 {
@@ -106,19 +139,83 @@ li {
 
 .movies {
   padding-top: 1em;
-  height: 80vh;
+  height: 100vh;
   background: #d7f0f2;
 }
 
 .movies aside {
-  background: aliceblue;
-  width: 90%;
+  background: rgba(240, 248, 255, 0.522);
+  width: 50%;
+  max-height: 100%;
   margin: auto;
-  padding: 1em;
+  margin-top: 1em;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.336)
 }
 
 ul li::marker {
   font-size: 150%;
   color: #517e94;
   opacity: 0;
+}
+
+.gif {
+  height: 500px;
+  margin: 20px;
+  border-radius: 30px;
+  box-shadow: 10px 10px 20px 20px rgba(0, 0, 0, 0.591);
+}
+
+h1 {
+  color: #00acef;
+  margin: 10px;
+}
+
+h2 {
+  padding: 10px;
+}
+
+.home {
+  background-color: #ff9daa45;
+  padding: 1em;
+  height: 100vh;
+}
+
+p {
+  padding: 15px;
+}
+
+.pplForm {
+  margin: 10px;
+}
+
+button {
+  all: unset;
+  background-color: #00acef;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color:#00acef;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.546);
+}
+
+input {
+  all: unset;
+  background-color: #ffffff;
+  padding: 7px;
+  margin-right: 5px;
+  border-radius: 20px;
+  text-align: left;
+  border: solid;
+  border-color: #00acef;
+}
+
+input:hover {
+  cursor: text;
 }
