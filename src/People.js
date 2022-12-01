@@ -20,6 +20,7 @@ export default function People () {
         e.preventDefault()
         const found = people.find(each => each.name.toLowerCase() === name.toLowerCase())
         setInput(found || {})
+        setName('')
     }
 
     return (
