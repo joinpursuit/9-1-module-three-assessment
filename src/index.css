@@ -1,9 +1,30 @@
+body {
+  background: lightpink;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  background-image: url(https://media.tenor.com/f3yMoFNJZboAAAAd/studio-ghibli.gif),
+    url(https://i.pinimg.com/originals/11/4d/1f/114d1f6312e7936c87a5a4570c95dd9b.gif);
+  height: 85vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-top: 2em;
+}
+.home h1 {
+  position: relative;
+  bottom: 1.8em;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
-  background: #517e94;
+  background: purple;
   padding: 1em;
-  margin-bottom: 2em;
+  /* margin-bottom: 2em; */
   font-family: sans-serif;
 }
 
@@ -36,7 +57,7 @@ li {
 }
 
 .locations {
-  background: ghostwhite;
+  background: lavender;
   padding: 1em;
   min-height: 80vh;
 }
@@ -44,13 +65,13 @@ li {
 .locations > ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-left: 0;
 }
 
 .locations ul > li {
-  background: lemonchiffon;
-  width: 26%;
+  background: pink;
+  width: 30%;
   padding: 2em;
 }
 
@@ -60,15 +81,15 @@ li {
 }
 
 .locations ul > li > ul li {
-  background: ghostwhite;
+  background: lightpink;
   display: flex;
   flex-wrap: no-wrap;
-  width: 90%;
+  width: 70%;
   justify-content: center;
 }
 
 .locations ul > li > ul li span {
-  text-align: center;
+  text-align: start;
   display: inline-block;
   width: 100%;
 }
@@ -83,13 +104,13 @@ li {
 }
 
 .people {
-  background: lemonchiffon;
+  background: lavender;
   height: 80vh;
   padding-top: 1em;
 }
 
 .people aside {
-  background: ghostwhite;
+  background: lavenderblush;
   width: 80%;
   min-height: 50%;
   margin: auto;
