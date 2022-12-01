@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import Footer from "./Components/Footer";
 import Nav from "./Components/Nav";
 import { fetchData } from "./Functions/fetch";
 
@@ -23,6 +24,7 @@ function Provider(props) {
         fetchData,
        }}>
         <Nav />
+        <Footer />
         {props.children}
        </ContextData.Provider>
     );

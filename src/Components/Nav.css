@@ -2,9 +2,17 @@
 .nav-bar {
     display: grid;
     grid-template-columns: .5fr repeat(3,1fr);
-    justify-items: right;
+    justify-items: center;
     align-items: baseline;
-    font-size: 14px;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 210;
+    color: aliceblue;
 }
 
 .nav-bar img {
@@ -18,6 +26,6 @@
 }
 
 .nav-bar a:hover {
-    color: aqua;
+    color: #66bfcb;
     transform: scale(1.2);
 }

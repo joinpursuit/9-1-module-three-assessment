@@ -1,4 +1,24 @@
 
 .home {
+    
     text-align: center;
+    background-image: url('../assets/ghibli-rain.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    color: aliceblue;
+    display: grid;
+    grid-template-rows: 10% 5% auto;
+    row-gap: 5%;
+    justify-items: center; 
+    margin-top: 4rem;
 }
+
+.home h1, .home p {
+    background-color: #517e94a6;
+    color: aliceblue;
+    height: fit-content;
+}
+
+
