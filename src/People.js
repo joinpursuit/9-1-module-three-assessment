@@ -38,7 +38,9 @@ export default function People({allPeople}) {
         )
         
       }
-      {!input.id && (
+      {!input.id && 
+      
+      (
        
           <p>Not Found</p>
         

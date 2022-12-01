@@ -2,14 +2,13 @@ import { Link } from "react-router-dom"
 
 export default function Nav() {
   return (
-    <>
+    <nav>
         <aside>
             <Link to="/">
                 <img
                     src="https://bestanimations.com/media/discs/895872755cd-animated-gif-9.gif"
                     alt="logo"
-                    height="50px"
-                    width='50px'
+                    
                 />
             </Link>
         </aside>
@@ -25,6 +24,6 @@ export default function Nav() {
         <aside>
             <Link to="/people">People</Link>
         </aside>
-    </>
+    </nav>
   )
 }

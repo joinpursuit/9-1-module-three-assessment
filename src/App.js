@@ -65,7 +65,7 @@ function App() {
         return response.json();
       })
       .then(function(locations) {
-        console.log(locations);
+        // console.log(locations);
        setLocations(locations)
       });
   }
