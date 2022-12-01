@@ -92,6 +92,8 @@ li {
   background: lemonchiffon;
   height: 80vh;
   padding-top: 1em;
+  text-align: center;
+  font-family: monospace;
 }
 
 .people aside {
