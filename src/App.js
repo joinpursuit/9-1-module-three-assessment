@@ -10,7 +10,6 @@ function App() {
   return (
     <Router>
     <div className="app">
-      <h1>Welcome to GhibliApp</h1>
        <Nav /> 
      
         <Routes>

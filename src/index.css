@@ -1,20 +1,28 @@
 nav {
   display: flex;
   justify-content: space-around;
-  background: #517e94;
+  /* background: #517e94; */
+  background: goldenrod;
   padding: 1em;
   margin-bottom: 2em;
   font-family: sans-serif;
+  border: 3px solid darkgreen;
 }
 
 nav a {
   text-decoration: none;
   font-size: 2em;
-  color: white;
+  /* color: white; */
+  color: black;
 }
 
 nav img {
   height: 50px;
+}
+
+.homePage:hover, .moviesPage:hover, .peoplePage:hover, .locationsPage:hover {
+  color: crimson;
+  font-weight: bold;
 }
 
 main {
@@ -123,11 +131,61 @@ ul li::marker {
   opacity: 0;
 }
 select{
-  width: 25vh;
-  margin-left: 43%;
+  width: 17vw;
+   margin-left: 40.5vw;
+   /* display:flex;
+   align-items: center; */
+}
+
+.movies{
+  margin: 0 auto;
+  border: 5px dotted rgb(235, 102, 13);
+  background-color: navy;
+}
+.movieListTitle{
+  color:gold
+}
+  .movieBox{
+    margin: 0 auto;
+    background-image: url("../assets/fancyMovieBox1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35vh;
+    width: 69vw;
+  }
+
+.movieInfo{
+  background-size:auto;
+  background-color: rgba(244, 217, 150, 0.8);
+  border: 10px dotted blue ;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 35vh;
+  width: fit-content;
+
+  padding-top:5vh ;
+}
+.movieTitle, .releaseDate{
+  text-align: center ;
+  display:inline;
+  margin-right: 1em;
+}
+
+.movieTitle, .movieText{
+  top: 50px;
+}
+
+.titleText{
+  font-size: 1.5em;
+  font-weight:lighter;
   
 
 }
-/* .movieList{
-  margin: 0 auto;
-} */
+.movieDescription{
+padding: 1em 1em 1em 1em;
+line-height: 1.3em;
+border: 2px solid rgb(255, 145, 0);
+background-color:rgba(255, 235, 205, .8);
+}

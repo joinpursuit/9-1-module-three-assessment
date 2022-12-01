@@ -42,7 +42,7 @@ const handleSelection = (e) =>{
          }  
       </ul> */}
       <div className='movies'>
-        <h2 className='movieListTitle'>Select a Movie</h2>
+        <h2 className='movieListTitle'>Select a Movie</h2><br/>
         <div className='movieList'>
         <select onChange={handleSelection}>
           <option value=''></option>
@@ -52,13 +52,16 @@ const handleSelection = (e) =>{
             
               </option>
           ))}
-        </select>
+        </select><br/>
         <br/> <br/>
         {thisMovie.id && (
-          <div>
-          <h2>{thisMovie.title} </h2>
-         <h3> {thisMovie.release_date}</h3>
-          <p>{thisMovie.description}</p>
+          <div className='movieBox'>
+            <div className='movieInfo'>
+              <div className='titleDiv'>
+              <h2 className='movieTitle'>Title:</h2><span className='titleText'>{thisMovie.title}</span> </div><br/>
+              <div><h4 className='releaseDate'> Release Date:</h4><span>{thisMovie.release_date}</span></div>
+              <p className='movieDescription'>{thisMovie.description}</p>
+            </div>
           </div>
         )}
         </div>
