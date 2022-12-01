@@ -23,7 +23,8 @@ export default function Locations() {
   };
 
   const sortBy = (val, orien = "", setOrien = () => {}) => {
-    // console.log("sort", val);
+    // sorting by name, climate, or reset & ASC or DESC order
+    // when sorting climates, same climate values will be sorted by ASC name
     val !== "reset"
       ? setLocations([
           ...locations.sort((a, b) => {
@@ -36,6 +37,14 @@ export default function Locations() {
               if (valA > valB) {
                 return 1;
               }
+              if (val === "climate") {
+                if (a.name < b.name) {
+                  return -1;
+                }
+                if (b.name > a.name) {
+                  return 1;
+                }
+              }
               return 0;
             } else {
               if (valA > valB) {
@@ -43,6 +52,14 @@ export default function Locations() {
               }
               if (valA < valB) {
                 return 1;
+              }
+              if (val === "climate") {
+                if (a.name < b.name) {
+                  return -1;
+                }
+                if (b.name > a.name) {
+                  return 1;
+                }
               }
               return 0;
             }
