@@ -72,15 +72,19 @@ export default function Locations() {
   return (
     <div className="locations">
       <h2>List of Locations</h2>
-      <button onClick={handleClick}>{buttonVal} Locations</button>
-      <button onClick={() => sortBy("name", nameOrien, setNameOrien)}>
-        Sort by Name ({nameOrien})
-      </button>
-      <button onClick={() => sortBy("climate", climateOrien, setClimateOrien)}>
-        Sort by Climate ({climateOrien})
-      </button>
-      <button onClick={() => sortBy("reset")}>Reset Sorting</button>
-      <ul>
+      <section className="buttons">
+        <button onClick={handleClick}>{buttonVal} Locations</button>
+        <button onClick={() => sortBy("name", nameOrien, setNameOrien)}>
+          Sort by Name ({nameOrien})
+        </button>
+        <button
+          onClick={() => sortBy("climate", climateOrien, setClimateOrien)}
+        >
+          Sort by Climate ({climateOrien})
+        </button>
+        <button onClick={() => sortBy("reset")}>Reset Sorting</button>
+      </section>
+      <ul className="locations-ul">
         {buttonVal === "Hide" &&
           locations.length > 0 &&
           locations.map(({ id, name, climate, terrain }) => (

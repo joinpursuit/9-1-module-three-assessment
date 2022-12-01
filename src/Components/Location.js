@@ -1,7 +1,7 @@
 export default function Location({ name, climate, terrain }) {
   return (
-    <li className="location">
-      <ul>
+    <li className="locations-li">
+      <ul className="location">
         <li>
           <span>Name: </span>
           {name}
