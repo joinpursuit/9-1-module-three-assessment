@@ -1,0 +1,64 @@
+.Welcome-Heading {
+  text-align: center;
+}
+.nav-bar {
+  display: flex;
+  grid-template-columns: repeat(1fr);
+}
+.img {
+  width: 50px;
+  height: 50px;
+}
+.movies {
+  text-align: center;
+}
+.movie-detail {
+  text-align: center;
+  display: grid;
+  background-color: rgb(216, 237, 250);
+  height: 65vh;
+  width: 100%;
+  padding: 20px;
+  margin: 20px;
+  box-sizing: border-box;
+}
+.person-detail {
+  font-size: large;
+  text-align: center;
+  display: grid;
+  background-color: rgb(216, 237, 250);
+  height: 65vh;
+  width: 100%;
+  padding: 20px;
+  margin: 20px;
+  box-sizing: border-box;
+}
+.person_Header {
+  font-size: x-large;
+}
+.form {
+  text-align: center;
+}
+.locations {
+  text-align: center;
+}
+.li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+  align-items: center;
+  text-align: center;
+  width: 350px;
+  padding: 50px;
+  margin: 50px;
+  background-color: antiquewhite;
+}
+.cardUl {
+  text-align: center;
+  display: grid;
+  align-items: center;
+  width: 250px;
+  padding: 10px;
+  margin: 5px;
+  background-color: lemonchiffon;
+}
