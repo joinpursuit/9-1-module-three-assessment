@@ -40,31 +40,31 @@ export default function Locations () {
                  <button type='submit' onClick={() => handleSort('terrain')}>SORT BY TERRAIN</button>
                 </>
             ) : null}
-    
-            <ul className='work'>
+            <ul>
                 {hide ? datas.map(({id, name, climate, terrain}) => (
-                    <ul key={id}>
+                <ul key={id} className='work'>
                     <li>
-                        <ul>
+                    <ul >
+                    <li className='details'>
                             <ul>
                             <li>
-                                <span>Name:</span>{name}
+                                <span>Name: </span> {name}
                             </li>
-                            </ul>
-                            <ul>
+                           
+                           
                             <li>
-                                <span>Climate:</span>{climate}
+                                <span>Climate: </span>   {climate}
                             </li>
-                            </ul>
-                            <ul>
+                           
+                         
                             <li>
                                 <span>Terrain: </span>{terrain}
                             </li>
                             </ul>
-                        </ul>
                     </li>
                     </ul>
-                  
+                    </li>
+                 </ul>
                 )): null}
             </ul>
         </main>
