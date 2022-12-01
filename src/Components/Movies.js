@@ -36,7 +36,7 @@ function Movies(props) {
                 <section className="movieInfo">
                     <h3>Title: {movieInfo.title}
                         <br></br>
-                        <span className="alt-title">{movieInfo.originalTitle}</span>
+                        <span>{movieInfo.originalTitle}</span>
                     </h3>
                     <img src = {movieInfo.image} alt = {movieInfo.title} />
                     <p><span>Released: </span> {movieInfo.releaseDate}</p>

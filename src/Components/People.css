@@ -1,4 +1,9 @@
 
+.people {
+    margin-top: 4rem;
+    height: 100vh;
+}
+
 .people h2 {
     font-family: Amaranth;
     margin-bottom: 15px;

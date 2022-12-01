@@ -37,6 +37,7 @@
 }
 
 .movieInfo img {
+    align-self: center;
     height:250px;
     grid-column: 1;
     grid-row: 1/4;
@@ -54,8 +55,6 @@
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 18px;
-   
-    /* text-decoration: underline; */
 }
 
 
