@@ -97,6 +97,8 @@ function sortTerrain(){
                     <ul className="first-ul">
                     {locations.map((loc) => {
                         return (
+                                <li>
+
                             <ul key={loc.id}>
                                 <li>
                                 <p><span style={{fontWeight: "bold"}}>Name:</span> {loc.name}</p>
@@ -104,6 +106,7 @@ function sortTerrain(){
                                 <p><span style={{fontWeight: "bold"}}>Terrain:</span> {loc.terrain}</p>
                                 </li>
                             </ul>
+                                </li>
                    
                         )
                     })}
