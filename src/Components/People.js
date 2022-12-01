@@ -74,7 +74,7 @@ function People(props) {
                      <div className="characterInfo">
                         <h3>Name: {personInfo.name}</h3>
                         <p>Age: {personInfo.age}</p>
-                        <p>{personInfo.gender}</p>
+                        <p>Gender: {personInfo.gender}</p>
                     </div> || notFound && <span>Not Found</span>
                 } 
               
