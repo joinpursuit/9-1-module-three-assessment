@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "./logo.png";
 
 export default function Navbar() {
   return (
     <nav className="nav">
       <Link to={"/"} style={{ textDecorationLine: "none" }}>
-        Home
+        <img src={logo} alt="gibli studio logo" />
       </Link>
       <Link to={"/movies"} style={{ textDecorationLine: "none" }}>
         Movies

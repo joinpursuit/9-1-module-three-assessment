@@ -29,6 +29,7 @@ export default function People() {
   return (
     <div className="people" style={{ textAlign: "center" }}>
       <h2>Search for a Person</h2>
+      <hr />
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">
           <input
@@ -42,13 +43,13 @@ export default function People() {
         </label>
         <button type="submit">Submit</button>
       </form>
-      {name === ""
-        ? "Person Not Found"
-        : input.id && (
+      {input
+        ? input.id && (
             <div>
               <h3>Name: {input.name}</h3>
               <p>
-                <strong>Age:</strong> {input.age}
+                <strong>Age:</strong>{" "}
+                {input.age === "" ? "unspecified" : input.age}
               </p>
               <p>
                 <strong>Gender:</strong>{" "}
@@ -61,7 +62,8 @@ export default function People() {
                 <strong>Hair Color:</strong> {input.hair_color}
               </p>
             </div>
-          )}
+          )
+        : "Person Not Found"}
     </div>
   );
 }

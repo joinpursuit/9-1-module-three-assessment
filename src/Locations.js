@@ -63,6 +63,7 @@ export default function Locations() {
   return (
     <div className="locations" style={{ textAlign: "center" }}>
       <h2>List of Locations</h2>
+      <hr />
       <button type="submit" onClick={() => setShow(!show)}>
         {show ? "Hide Locations" : "Show Locations"}
       </button>
