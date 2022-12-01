@@ -11,7 +11,6 @@ export default function People() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    //
     const chosenPerson = people.find(
       (person) => person.name.toLocaleLowerCase() === textInput
     );
