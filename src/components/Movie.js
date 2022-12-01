@@ -1,13 +1,13 @@
 export default function Movie({ movie }) {
   return (
-    <div>
+    <aside>
       <h3>Title: {movie.title}</h3>
       <p>
-        <strong>Release Date:</strong> {movie.release_date}
+        <span>Release Date:</span> {movie.release_date}
       </p>
       <p>
-        <strong>Description:</strong> {movie.description}
+        <span>Description:</span> {movie.description}
       </p>
-    </div>
+    </aside>
   );
 }

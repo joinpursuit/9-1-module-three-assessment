@@ -7,7 +7,10 @@ export default function Movies() {
   const [movie, setMovie] = useState();
 
   function handleSelect(e) {
-    setMovie(movies.find((movie) => movie.title === e.target.value));
+    const selectedMovie = movies.find(
+      (movie) => movie.title === e.target.value
+    );
+    setMovie(selectedMovie);
   }
 
   useEffect(() => {
@@ -17,7 +20,7 @@ export default function Movies() {
   }, []);
 
   return (
-    <div className="movies">
+    <section className="movies">
       <h2>Select a Movie</h2>
       <label htmlFor="movieSelect">
         <select id="movieSelect" onChange={handleSelect}>
@@ -30,6 +33,6 @@ export default function Movies() {
         </select>
       </label>
       {movie ? <Movie movie={movie} /> : ""}
-    </div>
+    </section>
   );
 }
