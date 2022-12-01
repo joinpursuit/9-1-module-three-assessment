@@ -32,26 +32,34 @@ const People = ({ pers }) => {
         </label>
       </form>
 
-      {person && (
+      {(person && (
         <div className="person-detail">
           <h1>
-            <strong className="person_Header">Title: </strong>
+            <strong className="person_Header">Name: </strong>
             {person.name}
           </h1>
           <h4>
-            <strong className="person_Header">Release Date: </strong>
+            <strong className="person_Header">age: </strong>
             {person.age}
           </h4>
           <h4>
-            <strong className="person_Header">Description: </strong>
+            <strong className="person_Header">eye color: </strong>
             {person.eye_color}
           </h4>{" "}
           <h4>
-            <strong className="person_Header">Description: </strong>
+            <strong className="person_Header">hair: </strong>
             {person.hair_color}
           </h4>
         </div>
-      )}
+      )) ||
+        (search && (
+          <div>
+            {" "}
+            <h4>
+              <strong className="person_Header">Not Found </strong>
+            </h4>
+          </div>
+        ))}
     </div>
   );
 };
