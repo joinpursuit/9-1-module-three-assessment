@@ -1,8 +1,12 @@
 
-
+.people h2 {
+    font-family: Amaranth;
+    margin-bottom: 15px;
+}
 
 .people form {
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .people form input {

@@ -18,7 +18,8 @@ function Movies(props) {
         fetchData(`films`)
         .then(respJson => setMovies(respJson))
         .catch(err => console.log(err))
-    })
+    }, [])
+    
     return (
         <div className="movies">
             <h2>Select A Movie</h2>

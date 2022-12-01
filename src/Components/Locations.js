@@ -33,7 +33,7 @@ function Locations(props) {
           sortArr[i] = locations.find(({id}) => id === idValue)
         )
         // sort sortArr objects by keyValues alphabetically => each location with `continental` => sort those alphabetically, then list the 'dry' alphabetically, etc...
-        // first forEach key Value create sep. array for objects with matching value (all contitnentals in one array)
+        // first forEach key Value create sep. array for objects with matching value (all continentals in one array, etc)
          const sortArr2 = keyValues.sort().map((el)=>{
             const filter = sortArr.filter(obj => obj[`${value}`] === el 
             ) 
@@ -63,6 +63,7 @@ function Locations(props) {
     return (
         <div className="locations">
           <h2>List of Locations</h2> 
+          
           <div className="buttons">
           <button
           onClick={()=> setClicked(!clicked)}>

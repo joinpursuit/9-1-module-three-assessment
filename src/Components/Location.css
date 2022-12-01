@@ -1,4 +1,8 @@
 
+.locations h2 {
+    font-family: Amaranth;
+}
+
 .thumbnailGrid {
     display: grid;
     grid-template-columns: repeat(3,1fr);

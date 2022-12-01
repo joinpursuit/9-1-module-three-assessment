@@ -43,15 +43,14 @@ function People(props) {
             })
         }
         setSearchInput("")
-
     }
-
 
     useEffect(() => {
         fetchData(`people`)
         .then(respJson => setPeople(respJson))
         .catch(err => console.log(err))
     }, [])
+    
     return (
         <div className='people'>
             <h2>Search for a Person</h2>
