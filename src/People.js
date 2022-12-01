@@ -1,9 +1,10 @@
 import { useState, useEffect} from 'react'
+import Error from './Error'
 
 export default function People () {
 
     const [people, setPeople] = useState([])
-    const [person, setPerson] = useState({})
+    const [loadingError, setLoadingError] = useState(false)
     const [name, setName] = useState('')
     const [input, setInput] = useState({})
 
@@ -13,14 +14,18 @@ export default function People () {
     headers: { 'Accept': 'application/json', },
     })
         .then(res => res.json())
-        .then(people => setPeople((people)))
+        .then(people => setPeople((people))
+        .catch((err) => {
+            setLoadingError(true)
+    }
+    ))
         }, [])
 
     const handleSubmit = (e) => {
         e.preventDefault()
         const found = people.find(each => each.name.toLowerCase() === name.toLowerCase())
         setInput(found || {})
-        setName('')
+        setName()
     }
 
     return (
@@ -38,7 +43,7 @@ export default function People () {
                     Submit
                 </button>
 
-                {input.id && (
+                {loadingError ? (<Error />) : input.id && (
                     <div>
                         <h1>Name: {input.name}</h1>
                         <p>Age: {input.age}</p>

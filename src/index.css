@@ -88,6 +88,10 @@ li {
   font-weight: bold;
 }
 
+.error {
+  font-family: monospace;
+}
+
 .people {
   background: lemonchiffon;
   height: 80vh;
