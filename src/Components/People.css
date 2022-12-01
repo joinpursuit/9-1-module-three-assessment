@@ -1,6 +1,5 @@
 .people {
     text-align: center;
-    color: red;
 }
 
 .form {
@@ -9,4 +8,5 @@
 
 .res {
     text-align: center;
+    background-color: chartreuse;
 }
