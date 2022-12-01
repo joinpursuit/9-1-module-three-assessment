@@ -9,6 +9,8 @@ export default function Locations() {
     const sortedByName = [...locations].sort((a, b) =>
       a[sortParam].localeCompare(b[sortParam])
     );
+    // Ref: https://stackoverflow.com/a/35092754/17735023
+
     setLocations(sortedByName);
   }
 
