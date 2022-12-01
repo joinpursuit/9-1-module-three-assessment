@@ -11,9 +11,9 @@ export default function Locations({ place }) {
   function handleButton() {
     showButton(!button);
   }
-  console.log(button);
-  console.log(place);
-  console.log(order);
+  //   console.log(button);
+  //   console.log(place);
+  //   console.log(order);
 
   let byName = place.slice(0);
   byName.sort(function (a, b) {
@@ -34,8 +34,8 @@ export default function Locations({ place }) {
     return x < y ? -1 : x > y ? 1 : 0;
   });
 
-  console.log("by name:");
-  console.log(byTerrain);
+  //   console.log("by name:");
+  //   console.log(byTerrain);
 
   //   const sortName = place.map((e) => e.name).sort();
   //   console.log(sortName);
@@ -70,7 +70,9 @@ export default function Locations({ place }) {
           order === "" &&
           place.map((e) => (
             <ul className="cardUl" key={e.id}>
-              <li className="li">Name: {e.name}</li>
+              <li className="li">
+                <p>Name:</p> <p>{e.name}</p>
+              </li>
               <li className="li">Climate: {e.climate}</li>
               <li className="li">Terrain: {e.terrain}</li>
             </ul>
@@ -79,7 +81,11 @@ export default function Locations({ place }) {
           order === "name" &&
           byName.map((e) => (
             <ul className="cardUl" key={e.id}>
-              <li className="li">Name: {e.name}</li>
+              <li className="li">
+                <p>Name: </p>
+
+                <p>{e.name}</p>
+              </li>
               <li className="li">Climate: {e.climate}</li>
               <li className="li">Terrain: {e.terrain}</li>
             </ul>
@@ -88,7 +94,9 @@ export default function Locations({ place }) {
           order === "climate" &&
           byClimate.map((e) => (
             <ul className="cardUl" key={e.id}>
-              <li className="li">Name: {e.name}</li>
+              <li className="li">
+                <p>Name:</p> <p>{e.name}</p>
+              </li>
               <li className="li">Climate: {e.climate}</li>
               <li className="li">Terrain: {e.terrain}</li>
             </ul>
@@ -97,7 +105,9 @@ export default function Locations({ place }) {
           order === "terrain" &&
           byTerrain.map((e) => (
             <ul className="cardUl" key={e.id}>
-              <li className="li">Name: {e.name}</li>
+              <li className="li">
+                <p>Name:</p> <p>{e.name}</p>
+              </li>
               <li className="li">Climate: {e.climate}</li>
               <li className="li">Terrain: {e.terrain}</li>
             </ul>

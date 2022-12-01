@@ -1,26 +1,42 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 import Movies from "./components/Movies";
 import People from "./components/People";
 import Locations from "./components/Locations";
 import ErrorMessage from "./components/ErrorMessage";
 import Home from "./components/Home";
-import { pers } from "./persons";
-import { place } from "./places";
-import { mov } from "./films";
+// import { pers } from "./persons";
+// import { place } from "./places";
+// import { mov } from "./films";
 
 import "./App.css";
-// import People from "../public/people" assert { type: "json" };
 
 function App() {
-  fetch("../public/people.json")
-    .then((res) => res.json)
-    .then((data) => console.log(data));
+  const [people, setShowPeople] = useState([]);
+  const [locations, setShowLocations] = useState([]);
+  const [movies, setShowMovies] = useState([]);
 
-  // console.log(pers);
-  // console.log(mov);
-  // console.log(place);
+  useEffect(() => {
+    fetch("people.json")
+      .then((res) => res.json())
+      .then((pep) => setShowPeople(pep));
+
+    fetch("locations.json")
+      .then((res) => res.json())
+      .then((loc) => setShowLocations(loc));
+
+    fetch("films.json")
+      .then((res) => res.json())
+      .then((cinema) => setShowMovies(cinema));
+  }, []);
+  // console.log("import", pers);
+  // console.log("import", place);
+  // console.log("import", mov);
+  console.log("ppl", people);
+  console.log("locations", locations);
+  console.log("movies", movies);
 
   return (
     <div className="app">
@@ -44,9 +60,9 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Movies" element={<Movies mov={mov} />} />
-        <Route path="/People" element={<People pers={pers} />} />
-        <Route path="/Locations" element={<Locations place={place} />} />
+        <Route path="/Movies" element={<Movies mov={movies} />} />
+        <Route path="/People" element={<People pers={people} />} />
+        <Route path="/Locations" element={<Locations place={locations} />} />
         <Route path="*" element={<ErrorMessage />} />
       </Routes>
     </div>

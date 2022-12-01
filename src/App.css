@@ -43,10 +43,15 @@
   text-align: center;
 }
 .li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   list-style: none;
   align-items: center;
   text-align: center;
-  width: 150px;
+  width: 350px;
+  padding: 50px;
+  margin: 50px;
+  background-color: antiquewhite;
 }
 .cardUl {
   text-align: center;

@@ -10,6 +10,7 @@ const People = ({ pers }) => {
   function handlesubmit(e) {
     e.preventDefault();
     setperson(pers.find((f) => f.name === search));
+    setsearch("");
   }
 
   // console.log(search);
