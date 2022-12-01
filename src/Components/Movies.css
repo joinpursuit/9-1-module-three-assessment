@@ -9,7 +9,8 @@
 
 .movies h2 {
     grid-row: 1;
-    grid-column: 2;  
+    grid-column: 2; 
+    font-family: Amaranth; 
 }
 
 .movies select {
