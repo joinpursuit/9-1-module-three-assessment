@@ -22,7 +22,9 @@ const Movies = ({ mov }) => {
         <select onChange={handleChange} name="film" id="film">
           <option value=""></option>
           {mov.map((e) => (
-            <option value={e.id}>{e.title}</option>
+            <option key={e.id} value={e.id}>
+              {e.title}
+            </option>
           ))}
         </select>
       </label>
