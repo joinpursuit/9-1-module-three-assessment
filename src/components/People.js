@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { get } from "../fetch";
+import { get } from "../api/fetch";
 
 import Person from "./Person";
 

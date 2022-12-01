@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-
-import { get } from "../fetch";
-
+import { get } from "../api/fetch";
 import Movie from "./Movie";
 
 export default function Movies() {
