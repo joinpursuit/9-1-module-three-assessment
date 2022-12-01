@@ -5,6 +5,7 @@
     grid-template-rows: 10% 10% auto;
     justify-content: center; 
     margin-top: 4rem;
+    color: #043d5a;
 }
 
 .movies h2 {
@@ -29,6 +30,11 @@
     grid-template-columns: 30% auto;
     grid-template-rows: auto auto auto;
     justify-items: center;
+    background-color: #517e94a6;
+    border: 2px solid #517e94;
+    border-radius: 5px;
+    color: #043d5a;
+    width: 80%;
 }
 
 .movieInfo img {
@@ -42,6 +48,8 @@
     grid-column: 2;
     font-size: 30px;
     margin: 0;
+    height: fit-content;
+    
 }
 
 .movies .movieInfo span {
