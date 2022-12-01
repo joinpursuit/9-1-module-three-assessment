@@ -15,9 +15,11 @@ nav a {
 
 nav img {
   height: 50px;
+  width: 50px;
+  border-radius: 50%;
 }
 
-main {
+main, input {
   margin-top: 1em;
   text-align: center;
 }
@@ -41,17 +43,25 @@ li {
   min-height: 80vh;
 }
 
+
 .locations > ul {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row ;
   justify-content: space-between;
+  margin-bottom: 5%;
   margin-left: 0;
 }
 
+
+
 .locations ul > li {
   background: lemonchiffon;
-  width: 26%;
+  width: 100%;
   padding: 2em;
+  margin-bottom:10px;
+  list-style-position: inside;
+
 }
 
 .locations ul > li > ul {
@@ -62,8 +72,10 @@ li {
 .locations ul > li > ul li {
   background: ghostwhite;
   display: flex;
+  flex-direction: column;
   flex-wrap: no-wrap;
   width: 90%;
+  padding: 10%;
   justify-content: center;
 }
 
@@ -72,6 +84,7 @@ li {
   display: inline-block;
   width: 100%;
 }
+
 .details li {
   list-style: none;
   margin: 0.5em 0;
@@ -93,6 +106,7 @@ li {
   width: 80%;
   min-height: 50%;
   margin: auto;
+  text-align: center;
 }
 
 .people aside h3 {
@@ -117,8 +131,26 @@ li {
   padding: 1em;
 }
 
-ul li::marker {
+ ul li::marker {
   font-size: 150%;
   color: #517e94;
   opacity: 0;
+ 
+}
+
+.search input{
+  background: rgba(255, 255, 255, 0.665);
+  border-radius: 20px 0px 0px 20px;;
+  flex: 1;
+  outline: none; 
+}
+
+.search button{
+  border-radius: 0px 20px 20px 0px;
+  color: #517e94;
+  background:black;
+}
+
+.search button:hover{
+  background: rgba(255, 255, 255, 0.665);
 }
