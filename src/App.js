@@ -11,7 +11,14 @@ function App() {
       <div className="app">
         <Navbar />
         <Routes>
-          <Route path="/" element={<h1>Welcome to GhibliApp</h1>} />
+          <Route
+            path="/"
+            element={
+              <main>
+                <h1>Welcome to GhibliApp</h1>
+              </main>
+            }
+          />
           <Route path="/movies" element={<Movies />} />
           <Route path="/people" element={<People />} />
           <Route path="/locations" element={<Locations />} />
