@@ -33,7 +33,6 @@
     background-color: #517e94a6;
     border: 2px solid #517e94;
     border-radius: 5px;
-    color: #043d5a;
     width: 80%;
 }
 
@@ -49,13 +48,14 @@
     font-size: 30px;
     margin: 0;
     height: fit-content;
-    
 }
 
 .movies .movieInfo span {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 18px;
-    text-decoration: underline;
+   
+    /* text-decoration: underline; */
 }
+
 

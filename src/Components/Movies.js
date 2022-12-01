@@ -13,6 +13,7 @@ function Movies(props) {
         releaseDate: "",
         description: "",
         image: "",
+        originalTitle: "",
     })
    
     useEffect(() => {
@@ -33,7 +34,10 @@ function Movies(props) {
                 {
                 movieInfo.title && 
                 <section className="movieInfo">
-                    <h3>Title: {movieInfo.title}</h3>
+                    <h3>Title: {movieInfo.title}
+                        <br></br>
+                        <span className="alt-title">{movieInfo.originalTitle}</span>
+                    </h3>
                     <img src = {movieInfo.image} alt = {movieInfo.title} />
                     <p><span>Released: </span> {movieInfo.releaseDate}</p>
                     <p><span>Description: </span> {movieInfo.description}</p>
