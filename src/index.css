@@ -1,3 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Spice&family=Roboto:ital,wght@1,100&family=Tangerine:wght@700&display=swap');
+
+.welcome{
+  font-family:'Tangerine', cursive;
+  font-size: 5em;
+  color: red;
+  font-style: italic;
+  text-align: center;
+  font-weight: bolder;
+  text-shadow: 1px 1px 4px black
+}
+
+.welcomePicsBox{
+  display:grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  width:100vw;
+  height: 100vw;
+
+}
+  .welcomePic1 {
+    margin-top: 7em;
+    grid-column: 1;
+    height: 13em;
+    width: 19.3em;
+    background-image: url('../assets/fancyMovieBox2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+ 
+  }
+
+  .welcomePic2 {
+    margin-top: 3em;
+    grid-column: 2;
+    height: 30em;
+    width: 30em;
+    background-image: url('../assets/movieCamera.png');
+    background-repeat:no-repeat;
+    background-size: cover;
+    border: 4px solid black;
+  }
+
+  .welcomePic3 {
+    grid-column: 3;
+    margin-top: 3em;
+    margin-left: 11em;
+    height: 17em;
+    width: 15.3em;
+    background-image: url('../assets/movieActionBox.jpeg');
+    background-position: no repeat;
+    background-size: cover;
+  }
+    
 nav {
   display: flex;
   justify-content: space-around;
@@ -20,8 +74,8 @@ nav img {
   height: 50px;
 }
 .wonderWoman{
-  height: 50px;
-  width: 50px;
+  height: 6em;
+  width: 6em;
 }
 .homePage:hover, .moviesPage:hover, .peoplePage:hover, .locationsPage:hover {
   color: crimson;
