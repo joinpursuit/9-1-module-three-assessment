@@ -12,6 +12,7 @@ export default function People() {
       .then((response) => response.json())
       .then((data) => {
         setPeople(data);
+        console.log(people);
       })
       .catch((error) => console.log(error));
   }, []);

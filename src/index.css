@@ -42,7 +42,16 @@ li {
   font-size: 1em;
 }
 /* LOCATIONS */
-/* DETAILS */
+/* DeTAILS */
+/* .details li {
+  list-style: none;
+  margin: 0.5em 0;
+  align-self: center;
+}
+
+.details li span:first-child {
+  font-weight: bold;
+} */
 
 .people {
   background: lemonchiffon;
