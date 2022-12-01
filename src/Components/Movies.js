@@ -1,6 +1,5 @@
 import React from 'react'
 import {useEffect, useState, useParams} from "react"
-//import films from "../../public/films.json"
 
 export default function Movies() {
 
@@ -30,17 +29,6 @@ const handleSelection = (e) =>{
 
   return (
   <>
-      {/* <ul>
-        {  
-         movieData &&  
-          movieData.map(movie => (
-            // <option key={movie.id} value={movie.id}>
-              <li >
-               Movie Title: {movie.title}  
-              </li>
-           ))
-         }  
-      </ul> */}
       <div className='movies'>
         <h2 className='movieListTitle'>Select a Movie</h2><br/>
         <div className='movieList'>
