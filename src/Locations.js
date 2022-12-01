@@ -52,17 +52,17 @@ export default function Locations(){
             <button onClick={() => setShow(!show)}>{show ? "Hide Locations" : "Show Locations"}</button>
             {show ? (
                 <button type="submit" onClick={sortByName}>
-                Sort By Name
+                Sort by Name
                 </button>
             ) : null}
             {show ? (
                 <button type="submit" onClick={sortByClimate}>
-                Sort By Climate
+                Sort by Climate
                 </button>
             ) : null}
             {show ? (
                 <button type="submit" onClick={sortByTerrain}>
-                Sort By Terrain
+                Sort by Terrain
                 </button>
             ) : null}
             

@@ -6,6 +6,7 @@ export default function People(){
     const [name, setName] = useState('');
     const [input, setInput] = useState({});
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const opt = info.find((person) => person.name.toLowerCase() === name.toLowerCase());
@@ -30,7 +31,7 @@ export default function People(){
             <h1>Search for a Person</h1>
             <form className="pplForm" onSubmit={handleSubmit}>
                 <label htmlFor="name">
-                    <input value={name} onChange={(e) => {
+                    <input value={name} placeholder="Search..." onChange={(e) => {
                         setName(e.target.value)
                     }}
                         type="text"
@@ -39,7 +40,7 @@ export default function People(){
                 <button type='submit'>Submit</button>
             </form>
             <aside>
-            {input.id && (
+            {input.id ? (
                 <div>
                     <h2>Name: {input.name}</h2>
                     <p><strong>Age: </strong>{input.age ? input.age : "N/A"}</p>
@@ -47,6 +48,8 @@ export default function People(){
                     <p><strong>Eye Color: </strong>{input.hair_color ? input.hair_color : "N/A"}</p>
                     <p><strong>Gender: </strong>{input.gender ? input.gender : "N/A"}</p>
                 </div>
+            ) : (
+                <p>No Search Result Found</p>
             )}
             </aside>
         </div>

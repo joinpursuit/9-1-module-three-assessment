@@ -9,14 +9,12 @@ nav {
   justify-content: space-around;
   background: #00acef;
   padding: 1em;
-  /* font-family: sans-serif; */
 }
 
 nav a {
   text-decoration: none;
   font-size: 2em;
   color: white;
-  /* margin-left: 100px; */
 }
 
 nav a:hover {
@@ -26,7 +24,6 @@ nav a:hover {
 nav img {
   height: 50px;
   width: 50px;
-  /* margin-top: 10px; */
 }
 
 main {
@@ -40,7 +37,6 @@ h2 {
   width: 90%;
   margin: auto;
   text-align: center;
-  /* font-family: sans-serif; */
 }
 
 li {
@@ -58,35 +54,21 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-left: 0;
-  /* padding: 0px; */
-  /* padding-left: ; */
 }
 
 .locations ul > li {
   background: rgb(223, 188, 242);
   width: 25%;
   padding: 2em;
-  /* padding-left: 0; */
-  /* padding-right: 50px; */
   margin-bottom: 30px;
   list-style: none;
   border-radius: 20px;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.336);
-  
-
 }
-
-/* .ulLi {
-  padding: 0;
-  box-shadow: 20px black;
-  margin-right: 10px;
-} */
 
 .locations ul > li > ul {
   margin-left: 0;
   list-style: none;
-  
-  /* margin-left: 0px; */
 }
 
 .locations ul > li > ul li {
@@ -142,10 +124,8 @@ li {
   max-height: 50%;
   margin: auto;
   margin-top: 20px ;
-  /* border: 5px rgb(240, 225, 90) dashed; */
   border-radius: 20px;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.336)
-  /* padding: 50px; */
 }
 
 .people aside h3 {
@@ -171,8 +151,6 @@ li {
   margin-top: 1em;
   border-radius: 20px;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.336)
-  /* border: 5px rgb(139, 197, 247) dashed; */
-  /* padding: 1em; */
 }
 
 ul li::marker {
@@ -193,6 +171,10 @@ h1 {
   margin: 10px;
 }
 
+h2 {
+  padding: 10px;
+}
+
 .home {
   background-color: #ff9daa45;
   padding: 1em;
@@ -200,9 +182,40 @@ h1 {
 }
 
 p {
-  padding: 10px;
+  padding: 15px;
 }
 
 .pplForm {
   margin: 10px;
+}
+
+button {
+  all: unset;
+  background-color: #00acef;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color:#00acef;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.546);
+}
+
+input {
+  all: unset;
+  background-color: #ffffff;
+  padding: 7px;
+  margin-right: 5px;
+  border-radius: 20px;
+  text-align: left;
+  border: solid;
+  border-color: #00acef;
+}
+
+input:hover {
+  cursor: text;
 }
