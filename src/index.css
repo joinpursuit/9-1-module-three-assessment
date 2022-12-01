@@ -15,6 +15,7 @@ nav a {
 
 nav img {
   height: 50px;
+  width: 50px;
 }
 
 main {
@@ -121,4 +122,12 @@ ul li::marker {
   font-size: 150%;
   color: #517e94;
   opacity: 0;
+}
+
+span {
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
 }
