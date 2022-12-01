@@ -1,0 +1,19 @@
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background: rgb(32, 91, 121);
+    color: antiquewhite;
+}
+
+.nav-links{
+   
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+li{
+    list-style: none;
+}
