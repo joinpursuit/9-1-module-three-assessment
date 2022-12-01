@@ -1,7 +1,5 @@
 import {useEffect, useState} from 'react';
 
-//Note having issues where code 'does not work' unless page is refreshed. Check with instructors for why. Currently working. 
-
 export default function People () {
     const [datas, setData] = useState([])
     const [people, setPeople] = useState({})
@@ -16,6 +14,7 @@ export default function People () {
             console.log(err)
         });
     }, []) 
+
 
     function handleSubmit(e){
         e.preventDefault()
@@ -46,12 +45,11 @@ export default function People () {
                 <aside>
                     <h3> <span>Name: </span> {people.name}</h3>
                     <p><span>Age: </span>{people.age}</p>
+                    <p><span>Gender: </span>{people.gender}</p>
                     <p><span>Eye Color: </span>{people.eye_color}</p>
                     <p><span>Hair Color: </span>{people.hair_color}</p>
                 </aside>
-            ) : null}
-            {error ? <p>Not Found</p> : null}
-            {/* Note: Find a way to make this error and previous T one and the same */}
+            ) : error && <p>Not Found</p>}
         </main>
     );
 };
