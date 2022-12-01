@@ -4,7 +4,6 @@ export default function Locations () {
     //NOTE: This Version looks closer to the photo with the spacing still having left issue. Words are still smooshed. Might still be the Li as believed. Button still in poor placement. May also be CSS issue. Try 3rd attempt and if still happening mess with css before splitting.
     const [datas, setData] = useState([])
     const [hide, setHide] = useState(false)
-    const [location] = useState([])
 
     useEffect(() => {
         fetch('./locations.json')
@@ -60,7 +59,7 @@ export default function Locations () {
             }
         })
         setData(sort)
-        setHide(true)
+        // setHide(true)
     };
    //NOTE: ISSUE MIGHT BE THE SORT CHOICE
 
@@ -96,7 +95,7 @@ export default function Locations () {
                    </ul>
                 </div>
             ): null}
-            <div>{hide && location}</div>
+            {/* <div>{hide && location}</div> */}
         </main>
     );
 };
