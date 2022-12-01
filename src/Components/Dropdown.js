@@ -10,6 +10,7 @@ function Dropdown({dataArr, stateVar, stateVarFunction, displayVarFunction }) {
                 title: "",
                 releaseDate: "",
                 description: "",
+                image: "",
             })
         }
         else {
@@ -17,7 +18,8 @@ function Dropdown({dataArr, stateVar, stateVarFunction, displayVarFunction }) {
             displayVarFunction({
                 title: movie.title,
                 releaseDate: movie.release_date,
-                description: movie.description
+                description: movie.description,
+                image: movie.image,
             })
         }     
     }

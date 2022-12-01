@@ -12,6 +12,7 @@ function Movies(props) {
         title: "",
         releaseDate: "",
         description: "",
+        image: "",
     })
    
     useEffect(() => {
@@ -33,8 +34,9 @@ function Movies(props) {
                 movieInfo.title && 
                 <section className="movieInfo">
                     <h3>Title: {movieInfo.title}</h3>
-                    <p><span>Released:<br></br></span> {movieInfo.releaseDate}</p>
-                    <p><span>Description: <br></br></span> {movieInfo.description}</p>
+                    <img src = {movieInfo.image} alt = {movieInfo.title} />
+                    <p><span>Released: </span> {movieInfo.releaseDate}</p>
+                    <p><span>Description: </span> {movieInfo.description}</p>
                 </section> 
                 }
         </div>
