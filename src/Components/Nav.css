@@ -1,0 +1,31 @@
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: .5fr repeat(3,1fr);
+    justify-items: center;
+    align-items: baseline;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 210;
+    color: aliceblue;
+}
+
+.nav-bar img {
+    grid-column: 1;
+    height: 50px;
+    /* width: 50px; */
+}
+
+.nav-bar a:first-child {
+    justify-self: center;
+}
+
+.nav-bar a:hover {
+    color: #66bfcb;
+    transform: scale(1.2);
+}

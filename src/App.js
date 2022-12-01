@@ -1,7 +1,13 @@
+import Provider from './Components/Provider';
+import RouteComponent from './Components/RouteComponent';
+import './App.css'
+
 function App() {
   return (
     <div className="app">
-      <h1>Welcome to GhibliApp</h1>
+      <Provider>
+        <RouteComponent />
+      </Provider>
     </div>
   );
 }

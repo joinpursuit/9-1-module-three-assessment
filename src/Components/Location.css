@@ -1,0 +1,26 @@
+
+.locations h2 {
+    font-family: Amaranth;
+}
+
+.thumbnailGrid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    list-style-position: inside;
+    text-align: center;
+}
+
+.thumbnailGrid li::marker{
+    margin: 0 auto;
+}
+
+.thumbnailGrid li {
+    display: flex;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15px;
+}
+
