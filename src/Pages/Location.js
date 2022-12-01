@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function Location({ location }) {
+export default function Location({ location, sorted }) {
   return (
     <div key={location.id} className="">
       <p>

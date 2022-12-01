@@ -5,7 +5,7 @@ export default function Locations() {
   // state for show btn
   const [show, setShow] = useState(false);
   const [locations, setLocations] = useState([]);
-  const [sort, setSorted] = useState(false);
+  const [sort, setSorted] = useState([]);
   //Fecthing Locations
   useEffect(() => {
     fetch("./locations.json")
@@ -18,33 +18,40 @@ export default function Locations() {
 
   //! SORTING by name usiong comparator function
   //* save sorted location to a state
+  const shallowCopy = [...locations];
+
   const handleSortedNames = () => {
-    const sortNames = locations.sort((nameA, nameB) => {
-      if (nameA.name.toLowerCase() < nameB.name.toLowerCase()) {
-        return -1;
-      } else if (nameA.name.toLowerCase() > nameB.name.toLowerCase()) {
-        return 1;
-      }
-      return 0;
-    });
-    setSorted(sortNames);
-    // console.log(sortNames);
+    setSorted(
+      shallowCopy.sort((nameA, nameB) => {
+        if (nameA.name.toLowerCase() < nameB.name.toLowerCase()) {
+          return -1;
+        } else if (nameA.name.toLowerCase() > nameB.name.toLowerCase()) {
+          return 1;
+        }
+        return 0;
+      })
+    );
+    // setLocations(sortNames);
+    // console.log("by names", sortNames);
   };
   // sort by Climate
   const handleSortedClimate = () => {
-    const sortedClimate = locations.sort((climateA, climateB) => {
-      if (climateA.climate.toLowerCase() < climateB.climate.toLowerCase()) {
-        return -1;
-      } else if (
-        climateA.climate.toLowerCase() > climateB.climate.toLowerCase()
-      ) {
-        return 1;
-      }
-      return 0;
-    });
-    setSorted(sortedClimate);
+    setSorted(
+      shallowCopy.sort((climateA, climateB) => {
+        if (climateA.climate.toLowerCase() < climateB.climate.toLowerCase()) {
+          return -1;
+        } else if (
+          climateA.climate.toLowerCase() > climateB.climate.toLowerCase()
+        ) {
+          return 1;
+        }
+        return 0;
+      })
+    );
+    // setLocations(sortedClimate);
+    // console.log("Climate", sortedClimate);
   };
-
+  //! state not working, results are the same for both after clicking button
   // const comparator = (a, b) => {
   //   return a.name.toLowerCase() - b.name.toLowerCase();
   // };
@@ -53,24 +60,28 @@ export default function Locations() {
   //! fix the order of the buttons
   return (
     <div className="details">
-      <h1>List of Locations</h1>
-      <button onClick={handleSortedNames}>
-        Sort by Name
-        {/* {show && sort ? "Sort by Name" : "Unsort Locations"} */}
-      </button>
-      <button onClick={handleSortedClimate}>
-        Sort by Climate
-        {/* {show && sort ? "Sort by Name" : "Unsort Locations"} */}
-      </button>
+      <h1 style={{ paddingBottom: "25px", textAlign: "center" }}>
+        List of Locations
+      </h1>
+      <div className="button">
+        <button
+          // className="button"
+          onClick={() => {
+            setShow(!show);
+          }}
+        >
+          {show ? "Hide Locations" : "Show Locations"}
+        </button>
+        {/* //!SORT BY NAME */}
+        {show ? (
+          <button onClick={handleSortedNames}>Sort by Name</button>
+        ) : null}
+        {/* //!SORT BY CLIMATE */}
+        {show ? (
+          <button onClick={handleSortedClimate}>Sort by Climate</button>
+        ) : null}
+      </div>
 
-      <button
-        className="button"
-        onClick={() => {
-          setShow(!show);
-        }}
-      >
-        {show ? "Hide Locations" : "Show Locations"}
-      </button>
       {show &&
         locations &&
         locations.map((location) => {
