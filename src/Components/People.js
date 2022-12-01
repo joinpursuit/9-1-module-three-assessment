@@ -4,6 +4,7 @@ export default function People() {
   const [people, setPeople] = useState([]);
   const [input, setInput] = useState("");
   const [person, setPerson] = useState({});
+  const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     fetch("people.json")
@@ -15,8 +16,22 @@ export default function People() {
   const submitHandle = (e) => {
     e.preventDefault();
     const found = people.find(
-      (item) => item.name.toLowerCase() === input.toLowerCase()
+      (item) => {
+        if (item.name.toLowerCase() === input.toLowerCase()) {
+          return item;
+        }
+        // if 3+ character input is part of a name, the first match will be returned
+        else if (
+          input.length > 2 &&
+          item.name.toLowerCase().includes(input.toLowerCase())
+        ) {
+          return item;
+        }
+      }
+
+      // if
     );
+    found ? setNotFound(false) : setNotFound(true);
     setPerson(found || {});
     setInput("");
   };
@@ -31,7 +46,7 @@ export default function People() {
         />
         <button>SUBMIT</button>
       </form>
-      {person.id ? (
+      {person.id && (
         <article className="person">
           <h3>
             <span>Name: </span>
@@ -42,17 +57,12 @@ export default function People() {
             {person.age}
           </p>
           <p>
-            <span>Eye Color: </span>
-            {person.eye_color}
-          </p>
-          <p>
-            <span>Hair Color: </span>
-            {person.hair_color}
+            <span>Gender: </span>
+            {person.gender}
           </p>
         </article>
-      ) : (
-        <p>Not Found</p>
       )}
+      {notFound && !person.id && <p>Not Found</p>}
     </div>
   );
 }
