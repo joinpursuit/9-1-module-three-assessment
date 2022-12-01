@@ -62,7 +62,7 @@ export default function People() {
           </p>
         </article>
       )}
-      {notFound && !person.id && <p>Not Found</p>}
+      {notFound && !person.id && <p id="not-found">Not Found</p>}
     </div>
   );
 }

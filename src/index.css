@@ -21,7 +21,7 @@ nav a {
   color: white;
 }
 
-nav a:hover{
+nav a:hover {
   color: black;
   transform: scale(1.1);
 }
@@ -60,7 +60,8 @@ h2 {
   color: #517e94;
 }
 
-.locations-ul, .location{
+.locations-ul,
+.location {
   list-style: none;
 }
 
@@ -71,7 +72,7 @@ h2 {
   gap: 20px;
 }
 
-.locations-ul .locations-li{
+.locations-ul .locations-li {
   border: 1px solid #517e94;
   border-radius: 10px;
   background-color: lemonchiffon;
@@ -79,7 +80,7 @@ h2 {
   width: 21.6vw;
 }
 
-.locations-ul .locations-li span{
+.locations-ul .locations-li span {
   font-weight: bold;
 }
 
@@ -94,20 +95,27 @@ form {
   margin: auto;
   display: flex;
   justify-content: center;
+  gap: 2px;
   margin-bottom: 20px;
 }
 
 .people .person {
   background: ghostwhite;
-  width: 40%;
+  width: 30%;
   padding: 1px;
   margin: auto;
   text-align: center;
+  border: 2px solid #517e94;
+  border-radius: 10px;
 }
 
 .people span,
 .movies span {
   font-weight: bold;
+}
+
+#not-found {
+  text-align: center;
 }
 
 .movies {
