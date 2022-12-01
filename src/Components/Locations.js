@@ -28,7 +28,7 @@ export default function Locations() {
         return 0;
       }
     });
-    console.log(sortedByClimates);
+
     setSortByClimate(sortedByClimates);
     setLocations(sortedByClimates);
   }

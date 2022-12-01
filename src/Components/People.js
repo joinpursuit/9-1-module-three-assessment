@@ -43,13 +43,16 @@ export default function People() {
       <form className="people__form" onSubmit={handleSubmit}>
         <label htmlFor="name">
           <input
+            className="input_form"
             type="text"
             name="name"
             placeholder="Enter a name..."
             value={searched}
             onChange={(e) => setSearched(e.target.value)}
           />
-          <button type="submit">Submit</button>
+          <button className="people_submit" type="submit">
+            Submit
+          </button>
         </label>
       </form>
       {Object.keys(input).length !== 0 ? (
@@ -65,7 +68,11 @@ export default function People() {
           </p>
         </div>
       ) : null}
-      {error ? <p>{error}</p> : null}
+      {error ? (
+        <p style={{ textAlign: "center", color: "red", fontSize: "larger" }}>
+          {error}
+        </p>
+      ) : null}
     </div>
   );
 }

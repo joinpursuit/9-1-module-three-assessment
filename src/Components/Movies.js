@@ -5,11 +5,18 @@ import "./Movies.css";
 export default function Movies() {
   const [movies, setMovies] = useState([]);
   const [picked, setPicked] = useState({});
+  const [display, setDisplay] = useState(false);
 
   function handleSelection(e) {
+    setDisplay(true);
     let selected = e.target.value;
-    let chosen = movies.find((movie) => movie.id === selected);
-    setPicked(chosen);
+    if (e.target.value !== "") {
+      let chosen = movies.find((movie) => movie.id === selected);
+      setPicked(chosen);
+    } else {
+      setDisplay(false);
+      setPicked({});
+    }
   }
 
   useEffect(() => {
@@ -37,20 +44,26 @@ export default function Movies() {
             </option>
           ))}
         </select>
-        {Object.keys(picked) !== 0 && (
-          <div className="movies_content">
-            <div className="movie_info">
-              <div>
-                <h3>Title: {picked.title}</h3>
-                <h4>Released: {picked.release_date}</h4>
-                <p>{picked.description}</p>
+        {display ? (
+          Object.keys(picked) !== 0 ? (
+            <div className="movies_content">
+              <div className="movie_info">
+                <div>
+                  <h3>Title: {picked.title}</h3>
+                  <h4>Released: {picked.release_date}</h4>
+                  <p className="descrip">{picked.description}</p>
+                </div>
               </div>
+              {Object.keys(picked) !== 0 ? (
+                <img
+                  className="movie_pic"
+                  src={picked.image}
+                  alt={picked.name}
+                />
+              ) : null}
             </div>
-            {Object.keys(picked) !== 0 && (
-              <img className="movie_pic" src={picked.image} alt={picked.name} />
-            )}
-          </div>
-        )}
+          ) : null
+        ) : null}
       </div>
     </div>
   );

@@ -1,7 +1,13 @@
+.locations {
+  font-size: large;
+  background-image: url("https://cdn.vox-cdn.com/thumbor/e2ADNueYeotFCjPSeSyB3XI6bqI=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/19935615/kaguya1.jpg");
+}
+
+.locations > h2 {
+  margin-top: 20px;
+}
+
 .location_card {
-  /* display: block;
-  justify-content: center;
-  align-items: center; */
   width: 80%;
   height: 80%;
   background-color: rgb(195, 224, 221);
@@ -22,11 +28,14 @@
 .location_button {
   display: flex;
   justify-content: center;
+  margin-top: 15px;
+  margin-right: 12px;
   padding: 10px;
   text-transform: uppercase;
   border-radius: 4px;
   background-color: rgb(245, 245, 245);
   color: rgb(6, 6, 6);
+  transform: scale(1.1);
 }
 
 .location_button:active {
