@@ -21,7 +21,7 @@ export default function Movies () {
     };
 
     return(
-        <div className='movie'>
+        <main className='movies'>
             <h2>Select A Movie</h2>
             <select onChange={handleChange}>
                 <option value=''></option>
@@ -34,9 +34,9 @@ export default function Movies () {
 
             {movie.id && (
                 <aside className='movies'>
-                    <h2>
-                        <span>Title: </span> {movie.title}
-                    </h2>
+                    <h3>
+                        <span>Title:</span> {movie.title}
+                    </h3>
                     <p>
                         <span>Release Date: </span> {movie.release_date}
                     </p>
@@ -45,7 +45,8 @@ export default function Movies () {
                     </p>
                 </aside>
             )}
-        </div>
+        </main>
     )
 }
 
+//Ask if aside is supposed to be a section 
