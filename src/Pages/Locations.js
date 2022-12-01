@@ -5,7 +5,7 @@ export default function Locations() {
   // state for show btn
   const [show, setShow] = useState(false);
   const [locations, setLocations] = useState([]);
-  const [sort, setSorted] = useState([]);
+  // const [sort, setSorted] = useState([]);
   //Fecthing Locations
   useEffect(() => {
     fetch("./locations.json")
@@ -18,6 +18,7 @@ export default function Locations() {
 
   //! SORTING by name usiong comparator function
   //* save sorted location to a state
+  //
   const shallowCopy = [...locations];
 
   const handleSortedNames = () => {
@@ -32,6 +33,7 @@ export default function Locations() {
       })
     );
   };
+
   // sort by Climate
   const handleSortedClimate = () => {
     setLocations(
@@ -59,11 +61,7 @@ export default function Locations() {
       {" "}
       <div className="button">
         {" "}
-        <h1
-        // style={{ paddingBottom: "25px", textAlign: "center" }}
-        >
-          List of Locations
-        </h1>
+        <h1> List of Locations</h1>
         <button
           onClick={() => {
             setShow(!show);

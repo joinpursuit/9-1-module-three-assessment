@@ -11,7 +11,6 @@ export default function Error() {
           style={{ height: "600px", width: "600px" }}
         />
       </Link>
-
       <hr />
       <div className="link_path" style={{ marginLeft: "10px" }}>
         {" "}
