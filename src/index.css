@@ -1,10 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,400&display=swap");
+
+body {
+  font-family: "Comic Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background: #517e94;
   padding: 1em;
-  margin-bottom: 2em;
-  font-family: sans-serif;
+  align-items: center;
 }
 
 nav a {
@@ -13,72 +21,66 @@ nav a {
   color: white;
 }
 
+nav a:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
 nav img {
   height: 50px;
+  width: 50px;
 }
 
-main {
+h1 {
   margin-top: 1em;
   text-align: center;
+  font-size: 40px;
 }
 
-section,
 h2 {
-  margin-top: 1em;
-  width: 90%;
-  margin: auto;
   text-align: center;
-  font-family: sans-serif;
-}
-
-li {
-  font-size: 1em;
 }
 
 .locations {
   background: ghostwhite;
-  padding: 1em;
+  padding-top: 1em;
   min-height: 80vh;
+  height: auto;
+  padding-bottom: 20px;
 }
 
-.locations > ul {
+.locations .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding-bottom: 20px;
+}
+
+.locations .buttons button:hover {
+  color: #517e94;
+}
+
+.locations-ul,
+.location {
+  list-style: none;
+}
+
+.locations-ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-left: 0;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
-.locations ul > li {
-  background: lemonchiffon;
-  width: 26%;
-  padding: 2em;
+.locations-ul .locations-li {
+  border: 1px solid #517e94;
+  border-radius: 10px;
+  background-color: lemonchiffon;
+  padding: 5px;
+  width: 21.6vw;
 }
 
-.locations ul > li > ul {
-  margin-left: 0;
-  list-style: none;
-}
-
-.locations ul > li > ul li {
-  background: ghostwhite;
-  display: flex;
-  flex-wrap: no-wrap;
-  width: 90%;
-  justify-content: center;
-}
-
-.locations ul > li > ul li span {
-  text-align: center;
-  display: inline-block;
-  width: 100%;
-}
-.details li {
-  list-style: none;
-  margin: 0.5em 0;
-  align-self: center;
-}
-
-.details li span:first-child {
+.locations-ul .locations-li span {
   font-weight: bold;
 }
 
@@ -88,20 +90,32 @@ li {
   padding-top: 1em;
 }
 
-.people aside {
-  background: ghostwhite;
+form {
   width: 80%;
-  min-height: 50%;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: 20px;
 }
 
-.people aside h3 {
-  padding-top: 1em;
+.people .person {
+  background: ghostwhite;
+  width: 30%;
+  padding: 1px;
+  margin: auto;
+  text-align: center;
+  border: 2px solid #517e94;
+  border-radius: 10px;
 }
 
 .people span,
 .movies span {
   font-weight: bold;
+}
+
+#not-found {
+  text-align: center;
 }
 
 .movies {
@@ -110,15 +124,19 @@ li {
   background: #d7f0f2;
 }
 
-.movies aside {
-  background: aliceblue;
-  width: 90%;
+.movies select {
+  display: block;
   margin: auto;
-  padding: 1em;
+  text-align: center;
 }
 
-ul li::marker {
-  font-size: 150%;
-  color: #517e94;
-  opacity: 0;
+.movies .selected-movie {
+  background: aliceblue;
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border: 2px solid #517e94;
+  border-radius: 10px;
 }
