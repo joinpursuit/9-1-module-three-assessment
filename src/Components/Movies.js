@@ -30,10 +30,7 @@ const handleSelection = (e) =>{
 
   return (
   <>
-    <div>Movies</div>
-      <ul>
-        {/* <select onChange={handleSelection}>
-          <option value=""> */}
+      {/* <ul>
         {  
          movieData &&  
           movieData.map(movie => (
@@ -41,12 +38,31 @@ const handleSelection = (e) =>{
               <li >
                Movie Title: {movie.title}  
               </li>
-            // </option>
            ))
-         }
-          {/* </option>
-        </select> */}
-      </ul>
+         }  
+      </ul> */}
+      <div className='movies'>
+        <h2 className='movieListTitle'>Select a Movie</h2>
+        <div className='movieList'>
+        <select onChange={handleSelection}>
+          <option value=''></option>
+          {movieData.map(moviePick =>( 
+              <option key={moviePick.id} value={moviePick.id}>
+                  {moviePick.title}
+            
+              </option>
+          ))}
+        </select>
+        <br/> <br/>
+        {thisMovie.id && (
+          <div>
+          <h2>{thisMovie.title} </h2>
+         <h3> {thisMovie.release_date}</h3>
+          <p>{thisMovie.description}</p>
+          </div>
+        )}
+        </div>
+      </div>
   </>
   )
 }

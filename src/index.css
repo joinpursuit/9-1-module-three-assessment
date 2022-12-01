@@ -122,3 +122,12 @@ ul li::marker {
   color: #517e94;
   opacity: 0;
 }
+select{
+  width: 25vh;
+  margin-left: 43%;
+  
+
+}
+/* .movieList{
+  margin: 0 auto;
+} */
