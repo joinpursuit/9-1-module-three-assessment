@@ -14,8 +14,6 @@ export default function Movies () {
         .then(res => res.json())
         .then(data => setData((data)))
         }, [])
-        
-    console.log(data)
     
     const handleChoice = (e) => {
         const chosen = e.target.value
