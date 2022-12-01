@@ -22,6 +22,12 @@ export default function Locations() {
     buttonVal === "Show" ? setButtonVal("Hide") : setButtonVal("Show");
   };
 
+  const reset = () => {
+    setLocations([...initialSort]);
+    setNameOrien("ASC");
+    setClimateOrien("ASC");
+  };
+
   const sortBy = (val, orien = "", setOrien = () => {}) => {
     // sorting by name, climate, or reset & ASC or DESC order
     // when sorting climates, same climate values will be sorted by ASC name
@@ -65,7 +71,7 @@ export default function Locations() {
             }
           }),
         ])
-      : setLocations([...initialSort]);
+      : reset();
     orien === "ASC" ? setOrien("DESC") : setOrien("ASC");
   };
 
