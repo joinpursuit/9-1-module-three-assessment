@@ -75,11 +75,11 @@ const Locations = () => {
                 <button onClick={() => {setShowLocations(!showLocations)}}>{!showLocations ? "Show Locations..." : "Hide Locations..."}</button>
                     {showLocations ? (
                         <div>
-                            <section>
+                            <nav>
                                 <button onClick={()=> {nameSort()}}>Sort By Name</button>
                                 <button onClick={()=> {ClimateSort()}}>Sort By Climate</button>
                                 <button onClick={()=> {TerrainSort()}}>Sort By Terrain</button>
-                            </section>
+                            </nav>
                             <ul className='grid'>
                                 {location.map((data) =>{
                                     return (
