@@ -8,6 +8,13 @@ const Movies = () => {
         setOpen(!open)
     }
 
+    useEffect(() => {
+        fetch('films.json')
+        .then(response => response.json())
+        .then(json => console.log(json));
+
+    })
+
     return (
         <>
         <h1>Select a Movie</h1>
