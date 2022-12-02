@@ -35,5 +35,8 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/plugin-syntax-import-assertions": "^7.20.0",
+    "json-loader": "^0.5.7"
+  }
 }
