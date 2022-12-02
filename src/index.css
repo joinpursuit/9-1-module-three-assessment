@@ -10,16 +10,25 @@ nav {
 nav a {
   text-decoration: none;
   font-size: 2em;
-  color: white;
+  color: rgb(10, 167, 229);
 }
 
 nav img {
   height: 50px;
+  width: 50px;
 }
+
+nav img:hover{
+  height: 100px;
+  width: 100px;
+}
+
+
 
 main {
   margin-top: 1em;
   text-align: center;
+  
 }
 
 section,
@@ -49,9 +58,10 @@ li {
 }
 
 .locations ul > li {
-  background: lemonchiffon;
-  width: 26%;
-  padding: 2em;
+  background: rgba(18, 156, 211, 0.394);
+  width: 100%;
+  padding: 20px 10px 20px 15px;
+  
 }
 
 .locations ul > li > ul {
@@ -83,7 +93,7 @@ li {
 }
 
 .people {
-  background: lemonchiffon;
+  background: rgba(18, 156, 211, 0.394);
   height: 80vh;
   padding-top: 1em;
 }
@@ -107,7 +117,8 @@ li {
 .movies {
   padding-top: 1em;
   height: 80vh;
-  background: #d7f0f2;
+  background: rgba(18, 156, 211, 0.394);
+  text-align: center;
 }
 
 .movies aside {
@@ -115,6 +126,7 @@ li {
   width: 90%;
   margin: auto;
   padding: 1em;
+
 }
 
 ul li::marker {
@@ -122,3 +134,35 @@ ul li::marker {
   color: #517e94;
   opacity: 0;
 }
+
+.movie-detail {
+  margin-top: 10px;
+  border: 2px solid rgba(146, 236, 244, 0.989);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+}
+
+ul {
+  list-style: none;
+}
+
+
+  ul.details {
+    padding: 0px;
+    text-align: center;
+  }
+  .li-cards {
+    margin: 0px;
+    text-align: center;
+    padding: 0px;
+  }
+
+
+
