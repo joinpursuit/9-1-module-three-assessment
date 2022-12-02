@@ -1,8 +1,10 @@
 import React from 'react';
 import { useState, useEffect } from "react";
+import MoviesListItem from './MoviesListItem';
 
 const Movies = () => {
     const [open, setOpen] = useState(false)
+    const [movies, setMovies] = useState([])
 
     const handleOpen = () => {
         setOpen(!open)
@@ -11,23 +13,29 @@ const Movies = () => {
     useEffect(() => {
         fetch('films.json')
         .then(response => response.json())
-        .then(json => console.log(json));
+        .then(data => {
+            // console.log('Movies Data: ',data);
+            setMovies(data)
+        },open)
 
     })
+
 
     return (
         <>
         <h1>Select a Movie</h1>
         <button onClick={handleOpen}>Dropdown</button>
         {open ? (
-            <ul className="menu">
-                <li clasName='menu-item'>
-                    <button>example 1</button>
-                </li>
-                <li clasName='menu-item'>
-                    <button>example 2</button>
-                </li>
-            </ul>
+            movies.map((movie) => {
+                return (
+                    <ul>
+                        <li>
+                            {movie.title}
+                        </li>
+                    </ul>
+                
+                )
+            })
         ) : null }
         {open ? <div>Is Open</div> : <div>Is Closed</div>}  
         </>
