@@ -6,6 +6,7 @@ export default function Search({handlePerson, setPassed, passed}) {
     function handleSubmit(event) {
         event.preventDefault()
        handlePerson(searchTitle)
+       setSearchTitle("")
     }
 
 
@@ -20,8 +21,8 @@ export default function Search({handlePerson, setPassed, passed}) {
             id="searchBar"
             type="text"
             name="search"
+            value={searchTitle}
             onChange={handleTextChange}
-            placeholder="Search..."
           />
         </label>
         <button className="searchButton" type="submit">Submit</button>

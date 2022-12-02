@@ -1,6 +1,7 @@
 import Search from "./Search"
 import { useState } from "react"
 import peopleData from "../people.json"
+import { Form } from "react-router-dom"
 
 export default function People() {
     const [personData, setPersonData] = useState({})
@@ -18,7 +19,12 @@ export default function People() {
         } else if (passed && personData === undefined) {
             return <p>Not Found</p>
         } else {
-            return <h1><span>Name:</span> {personData.name}</h1>
+            return <div className="people" >
+                <h1><span>Name:</span> {personData.name}</h1>
+                <p><span>Age:</span> {personData.age}</p>
+                <p><span>Eye Color:</span> {personData.eye_color}</p>
+                <p><span>Hair Color:</span> {personData.hair_color}</p>
+            </div>
         }
     }
 
