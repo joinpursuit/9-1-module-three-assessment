@@ -33,18 +33,16 @@ export default function Locations() {
     )
     setSortLocation(true)
   }
-    
+
   function handleSortByTerrain() {
     setLocationsData(
-        [...locations].sort((a, b) => {
-          if (a.climate.toLowerCase() < b.climate.toLowerCase()) return -1
-          if (a.climate.toLowerCase() > b.climate.toLowerCase()) return 1
-          return 0
-        })
-      )
-      setSortLocation(true)
-    }
-   
+      [...locations].sort((a, b) => {
+        if (a.climate.toLowerCase() < b.climate.toLowerCase()) return -1
+        if (a.climate.toLowerCase() > b.climate.toLowerCase()) return 1
+        return 0
+      })
+    )
+    setSortLocation(true)
   }
 
   return (
