@@ -43,7 +43,7 @@ export default function People() {
         <button>Submit</button>
       </form>
       {!person && notFound ? (
-        <p>"Not Found"</p>
+        <p style={{ color: "white" }}>"Not Found"</p>
       ) : person ? (
         <Person person={person} />
       ) : (
