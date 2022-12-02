@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Home(props) {
+function Home() {
     return (
-        <div>
-            Home Page
+        <div className='home'>
+            <h1>Welcome to GhibliApp</h1>
         </div>
     );
 }

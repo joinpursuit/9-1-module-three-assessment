@@ -65,6 +65,7 @@ function Searchbar() {
                 <p> <span><b>Age:</b></span> {results.age}</p>
                 <p> <span><b>Eye Color:</b></span> {results.eye_color}</p>
                 <p> <span><b>Hair Color:</b></span> {results.hair_color}</p>
+                <p> <span><b>Gender:</b></span> {results.gender}</p>
             </div>
         ) : "Not Found"}
     </div>

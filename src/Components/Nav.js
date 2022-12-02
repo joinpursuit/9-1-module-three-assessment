@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom';
 function Nav(props) {
     return (
         <nav>
-       <Link Link style={{color:'white', textDecoration: 'none'}} to='/'> <h1>GhibliApp Icon</h1></Link>
+       <Link Link style={{color:'white', textDecoration: 'none'}} to='/'> 
+       <img className='logo' src='logo.png'/>
+       </Link>
         <ul className='nav-links'>
             <Link style={{color:'white', textDecoration: 'none'}} to='/movies'>
                 <li>Movies</li>
