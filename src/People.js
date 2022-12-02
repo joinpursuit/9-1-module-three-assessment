@@ -23,7 +23,8 @@ export default function People () {
     const handleSubmit = (e) => {
         e.preventDefault()
         const found = people.find(each => each.name.toLowerCase() === name.toLowerCase())
-        setInput(found || <Error />)
+        setInput(found) 
+        (found ? input : setLoadingError(true))
         setName("")
     }
 
