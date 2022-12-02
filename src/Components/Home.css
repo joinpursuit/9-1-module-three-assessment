@@ -1,0 +1,37 @@
+.home{
+    height: 90vh;
+    background-image: url("https://wallpaperaccess.com/full/4236224.jpg");
+}
+
+h1{
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 70px;
+    padding-top: 20px;
+    color: rgb(17, 122, 122);
+    text-align: center;
+    font-family:fantasy;
+
+}
+img{
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    
+    
+}
+
+.imgandname{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
+.homep{
+    font-family:fantasy;
+text-align: center;
+color: rgb(250, 220, 215);
+
+}
