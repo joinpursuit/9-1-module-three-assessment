@@ -1,22 +1,51 @@
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
-  background: #517e94;
-  padding: 1em;
+  background: #319994;
+  padding: 2em 0em 2em 0em;
   margin-bottom: 2em;
-  font-family: sans-serif;
+  font-family: fantasy;
+  margin: auto 0;
+  width: 100%;
 }
 
 nav a {
   text-decoration: none;
+  text-align: center;
   font-size: 2em;
-  color: white;
+  color: rgb(40, 219, 216);
+}
+nav a:hover {
+  font-size: 3em;
+  color: rgb(236, 155, 190);
+}
+
+.home {
+  min-width: 100vh;
+  background-image: url("https://wallpaperaccess.com/full/4236224.jpg");
 }
 
 nav img {
   height: 50px;
+  width: 50px;
 }
-
+nav img:hover {
+  height: 90px;
+  width: 90px;
+}
 main {
   margin-top: 1em;
   text-align: center;
@@ -30,28 +59,37 @@ h2 {
   text-align: center;
   font-family: sans-serif;
 }
-
-li {
-  font-size: 1em;
+.locationh2{
+  margin: 2em;
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 30px;
+  padding: 20px;
+background-color: #1a2f2e;
+  color: rgb(255, 255, 255);
 }
 
+
 .locations {
-  background: ghostwhite;
-  padding: 1em;
-  min-height: 80vh;
+  background-image: url("https://www.thisiscolossal.com/wp-content/uploads/2020/09/ghibli-9.jpg");
+  min-height: 100vh;
 }
 
 .locations > ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-left: 0;
+  flex-flow: row;
+  text-align: center;
+  width: auto;
+  margin: 0px;
+  padding: 0px;
 }
 
 .locations ul > li {
-  background: lemonchiffon;
-  width: 26%;
-  padding: 2em;
+  background: rgb(53, 169, 152);
+  width: 100%;
+  padding: 20px 10px 20px 15px;
 }
 
 .locations ul > li > ul {
@@ -60,11 +98,20 @@ li {
 }
 
 .locations ul > li > ul li {
-  background: ghostwhite;
+  background: rgb(170, 250, 245);
   display: flex;
   flex-wrap: no-wrap;
   width: 90%;
   justify-content: center;
+}
+
+.locationCards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.locationCard {
+  width: 250px;
 }
 
 .locations ul > li > ul li span {
@@ -81,22 +128,45 @@ li {
 .details li span:first-child {
   font-weight: bold;
 }
-
+/* extras */
+ul.details {
+  padding: 0px;
+  text-align: center;
+}
+.li-content {
+  margin: 0px;
+  text-align: center;
+  padding: 0px;
+}
 .people {
   background: lemonchiffon;
-  height: 80vh;
+  height: fit-content;
   padding-top: 1em;
 }
 
 .people aside {
-  background: ghostwhite;
+  background: rgb(183, 247, 235);
   width: 80%;
   min-height: 50%;
   margin: auto;
 }
 
+.people img {
+  width: 900px;
+  padding-left: 1em;
+  align-items: center;
+  margin: 0px;
+  padding-left: 18%;
+}
 .people aside h3 {
   padding-top: 1em;
+}
+
+.notfoundmsg{
+  padding: 20px;
+  margin: 30px;
+  background-color: rgb(250, 73, 132);
+  font-size: 20px;
 }
 
 .people span,
@@ -106,15 +176,33 @@ li {
 
 .movies {
   padding-top: 1em;
-  height: 80vh;
+  width: 100%;
+  height: 100%;
   background: #d7f0f2;
+  text-align: center;
+}
+.img-description {
+  justify-content: flex-start;
+}
+.movie-content {
+  display: flex;
+  justify-items: center;
+  margin: 40px;
+  padding: 20px;
+  border: solid rgb(50, 195, 166) 2px;
+  font-size: 20px;
+  font-family: fantasy;
+}
+.movies img {
+  padding-right: 20px;
 }
 
 .movies aside {
-  background: aliceblue;
+  background: rgb(124, 249, 234);
   width: 90%;
   margin: auto;
   padding: 1em;
+  text-align: center;
 }
 
 ul li::marker {
