@@ -30,9 +30,15 @@ const handleSelection = (e) =>{
   return (
   <>
       <div className='movies'>
+        <div className='moviePicBox'>
+            <div className='moviePic1'></div>
+            <div className='moviePic2'></div>
+            </div>
         <h2 className='movieListTitle'>Select a Movie</h2><br/>
         <div className='movieList'>
-        <select onChange={handleSelection}>
+        <select 
+        className='movieSelector'
+        onChange={handleSelection}>
           <option value=''></option>
           {movieData.map(moviePick =>( 
               <option key={moviePick.id} value={moviePick.id}>
@@ -41,6 +47,7 @@ const handleSelection = (e) =>{
               </option>
           ))}
         </select><br/>
+        
         <br/> <br/>
         {thisMovie.id && (
           <div className='movieBox'>
