@@ -1,7 +1,9 @@
 export default function Person({ person }) {
   return (
     <aside>
-      <h3>Name: {person.name}</h3>
+      <h3>
+        Name: <em style={{ fontWeight: "normal" }}>{person.name}</em>
+      </h3>
       <p>
         <span>Age:</span> {person.age}
       </p>

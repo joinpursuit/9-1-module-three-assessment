@@ -22,11 +22,18 @@ export default function Movies() {
   return (
     <section className="movies">
       <h2>Select a Movie</h2>
+      <br></br>
       <label htmlFor="movieSelect">
-        <select id="movieSelect" onChange={handleSelect}>
+        <select
+          style={{ height: "30px" }}
+          id="movieSelect"
+          onChange={handleSelect}>
           <option value=""></option>
           {movies.map((movie) => (
-            <option value={movie.title} key={movie.id}>
+            <option
+              style={{ textAlign: "center" }}
+              value={movie.title}
+              key={movie.id}>
               {movie.title}
             </option>
           ))}

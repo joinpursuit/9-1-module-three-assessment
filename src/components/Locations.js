@@ -40,10 +40,16 @@ export default function Locations() {
           {locations.map((location) => {
             return (
               <li key={location.id}>
-                <ul>
-                  <li>Name: {location.name}</li>
-                  <li>Climate: {location.climate}</li>
-                  <li>Terrain: {location.terrain}</li>
+                <ul className="details">
+                  <li>
+                    <span>Name: {location.name}</span>
+                  </li>
+                  <li>
+                    <span>Climate: {location.climate}</span>
+                  </li>
+                  <li>
+                    <span>Terrain: {location.terrain}</span>
+                  </li>
                 </ul>
               </li>
             );
