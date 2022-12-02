@@ -4,7 +4,6 @@ import React from "react"
 export default function Locations() {
   const [show, setShow] = useState(false)
   const [locations, setLocationsData] = useState([])
-  const [sortLocation, setSortLocation] = useState(false)
   useEffect(() => {
     fetch("/locations.json")
       .then((res) => res.json())
@@ -13,36 +12,30 @@ export default function Locations() {
   }, [])
 
   function handleSortByName() {
-    setLocationsData(
-      [...locations].sort((a, b) => {
-        if (a.name.toLowerCase() < b.name.toLowerCase()) return -1
-        if (a.name.toLowerCase() > b.name.toLowerCase()) return 1
-        return 0
-      })
-    )
-    setSortLocation(true)
+    const sortedLocations = [...locations].sort((a, b) => {
+      if (a.name.toLowerCase() < b.name.toLowerCase()) return -1
+      if (a.name.toLowerCase() > b.name.toLowerCase()) return 1
+      return 0
+    })
+    setLocationsData(sortedLocations)
   }
 
   function handleSortByClimate() {
-    setLocationsData(
-      [...locations].sort((a, b) => {
-        if (a.climate.toLowerCase() < b.climate.toLowerCase()) return -1
-        if (a.climate.toLowerCase() > b.climate.toLowerCase()) return 1
-        return 0
-      })
-    )
-    setSortLocation(true)
+    const sortedLocations = [...locations].sort((a, b) => {
+      if (a.climate.toLowerCase() < b.climate.toLowerCase()) return -1
+      if (a.climate.toLowerCase() > b.climate.toLowerCase()) return 1
+      return 0
+    })
+    setLocationsData(sortedLocations)
   }
 
   function handleSortByTerrain() {
-    setLocationsData(
-      [...locations].sort((a, b) => {
-        if (a.terrain.toLowerCase() < b.terrain.toLowerCase()) return -1
-        if (a.terrain.toLowerCase() > b.terrain.toLowerCase()) return 1
-        return 0
-      })
-    )
-    setSortLocation(true)
+    const sortedLocations = [...locations].sort((a, b) => {
+      if (a.terrain.toLowerCase() < b.terrain.toLowerCase()) return -1
+      if (a.terrain.toLowerCase() > b.terrain.toLowerCase()) return 1
+      return 0
+    })
+    setLocationsData(sortedLocations)
   }
 
   return (
