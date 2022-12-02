@@ -27,7 +27,7 @@
     background-image: url('../assets/fancyMovieBox2.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    animation: tilt .9s infinite
+    animation: tilt 1s infinite
  
   }
 
@@ -51,7 +51,7 @@
     background-image: url('../assets/movieActionBox.jpeg');
     background-position: no repeat;
     background-size: cover;
-    animation: tilt .9s infinite
+    animation: tilt 1s infinite
   }
     
   @keyframes tilt {
@@ -74,11 +74,16 @@ nav {
   border: 3px solid darkgreen;
 }
 
+
 nav a {
   text-decoration: none;
   font-size: 2em;
   /* color: white; */
   color: black;
+}
+
+nav:active{
+color: maroon;git
 }
 
 nav img {
@@ -115,6 +120,11 @@ li {
   background: ghostwhite;
   padding: 1em;
   min-height: 80vh;
+  background-image: url("./../assets/blueCity.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .5;
+
 }
 
 .locations > ul {
@@ -162,6 +172,16 @@ li {
   background: lemonchiffon;
   height: 80vh;
   padding-top: 1em;
+  background-image: url("./../assets/people2.png");
+  opacity: .6;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.personNotFoundMsg{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 55ems;
 }
 
 .people aside {
@@ -189,14 +209,6 @@ li {
   margin-left: 38em;
 }
 
-/* .people{
-margin: 0 auto;
-background-image: url("../assets/twoPeopleWithPopCorn.png");
-background-repeat: no-repeat;
-background-size: contain;
-height: 35vh;
-width: 69vw;
-} */
 
 .nameSortBtn,
 .climateSortBtn,

@@ -58,7 +58,7 @@ return (
     </div>
     )
     :
-      <p>Person Not Found</p>
+      <p className='personNotFoundMsg'>{("Person Not Found")}</p>
     } 
     </>
   

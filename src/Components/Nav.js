@@ -8,7 +8,18 @@ export default function Nav() {
   return (
     <div>
         <nav>
-          <img className="wonderWoman" src={wonderWomanLionness} alt="wonder woman"/> 
+          
+          <Link to="/">
+            <img className="wonderWoman" src={wonderWomanLionness} alt="wonder woman"/> </Link>
+
+          {/* <Link to="/about">
+
+          <img
+            src="https://bobbyhadz.com/images/blog/react-usestate-dynamic-key/thumbnail.webp"
+            alt="example"
+          /> */}
+        {/* </Link> */}
+
             <Link className='homePage' to="/">Home</Link>
             <Link className='moviesPage' to="/movies">Movies</Link>
             <Link className='peoplePage' to="/people">People</Link>

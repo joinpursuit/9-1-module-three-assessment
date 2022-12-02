@@ -95,7 +95,7 @@ return (
     <h1 className='locationsHdg'>List of Locations</h1>
     <button 
     className='showHideBtn'
-    onClick={() => setShowLocation(!showLocation)}>{showLocation ? "Hide" : "Show"}</button>
+    onClick={() => setShowLocation(!showLocation)}>{showLocation ? "Hide Locations" : "Show Locations"}</button>
     
     { showLocation ? 
     <>
