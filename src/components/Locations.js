@@ -13,13 +13,11 @@ export default function Locations() {
   }, [])
 
   function handleSortByName() {
-    setLocationsData(
-      [...locations].sort((a, b) => {
-        if (a.name.toLowerCase() < b.name.toLowerCase()) return -1
-        if (a.name.toLowerCase() > b.name.toLowerCase()) return 1
-        return 0
-      })
-    )
+    ;[...locations].sort((a, b) => {
+      if (a.name.toLowerCase() < b.name.toLowerCase()) return -1
+      if (a.name.toLowerCase() > b.name.toLowerCase()) return 1
+      return 0
+    })
     setSortLocation(true)
   }
 
@@ -34,26 +32,39 @@ export default function Locations() {
     setSortLocation(true)
   }
 
+  function handleSortByTerrain() {
+    setLocationsData(
+      [...locations].sort((a, b) => {
+        if (a.terrain.toLowerCase() < b.terrain.toLowerCase()) return -1
+        if (a.terrain.toLowerCase() > b.terrain.toLowerCase()) return 1
+        return 0
+      })
+    )
+    setSortLocation(true)
+  }
   return (
     <div className="locations">
       <h1>List of Locations</h1>
       <button onClick={() => setShow(!show)}>
         {show ? "Hide Locations" : "Show Locations"}
       </button>
-      <ul>
-        {show &&
-          locations &&
-          locations.map((item) => (
-            <li key={item.id}>
-              {" "}
-              <p> Name: {item.name}</p>
-              <p>Climate: {item.climate}</p>
-              <p>Terrain: {item.terrain}</p>
-            </li>
-          ))}
-      </ul>
       <button onClick={handleSortByName}>Sort By Name</button>
-      <button onClick={handleSortByClimate}>Sort By Climate</button>
+      <button onClick={handleSortByClimate}> Sort By Climate</button>
+      <button onClick={handleSortByTerrain}> Sort By Terrain</button>
+      <section>
+        <ul>
+          {show &&
+            locations &&
+            locations.map((item) => (
+              <li key={item.id}>
+                {" "}
+                <p> Name: {item.name}</p>
+                <p>Climate: {item.climate}</p>
+                <p>Terrain: {item.terrain}</p>
+              </li>
+            ))}
+        </ul>
+      </section>
     </div>
   )
 }

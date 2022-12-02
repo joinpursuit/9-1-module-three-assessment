@@ -5,6 +5,7 @@ export default function People() {
   const [person, setPerson] = useState(null)
   const [people, setPeople] = useState([])
   const [name, setName] = useState("")
+  const [error, setError] = useState("")
 
   useEffect(() => {
     fetch("./people.json")
@@ -19,7 +20,7 @@ export default function People() {
       (item) => item.name.toLowerCase() === name.toLowerCase()
     )
     if (!founded) {
-      alert("Not Found")
+      setError("Not Found")
     } else {
       setPerson(founded)
       setName("")
@@ -40,6 +41,7 @@ export default function People() {
         </label>
         <button type="Submit">Submit</button>
       </form>
+      {error ? "Not Found" : null}
       {person ? <Person person={person} /> : null}
     </div>
   )
