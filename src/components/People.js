@@ -28,7 +28,7 @@ const People = () => {
     }
 
     if (inputBox.length > 0) {
-      data?.find((person) => {
+      return data?.find((person) => {
         if (person.name.toLowerCase() === inputBox.toLowerCase()) {
           setPersonInfo(person || []);
         } else {
