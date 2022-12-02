@@ -14,7 +14,13 @@ nav a {
 }
 
 nav img {
+  position: absolute;
+  bottom: 620px;
   height: 50px;
+}
+
+h1 {
+  text-align: center;
 }
 
 main {
@@ -82,10 +88,16 @@ li {
   font-weight: bold;
 }
 
+.error {
+  font-family: monospace;
+}
+
 .people {
   background: lemonchiffon;
   height: 80vh;
   padding-top: 1em;
+  text-align: center;
+  font-family: monospace;
 }
 
 .people aside {
@@ -108,6 +120,8 @@ li {
   padding-top: 1em;
   height: 80vh;
   background: #d7f0f2;
+  text-align: center;
+  font-family: monospace;
 }
 
 .movies aside {
