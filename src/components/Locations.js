@@ -52,11 +52,10 @@ const Locations = () => {
         {show &&
           data &&
           data?.map((location) => (
-            <li key={location.id}>
-              <ul>
+            <li className="location" key={location.id}>
+              <ul className="locationsInfo">
                 <li>
-                  <strong>Name: </strong>
-                  {location.name}
+                  <h2>{location.name}</h2>
                 </li>
                 <li>
                   <strong>Climate: </strong>
