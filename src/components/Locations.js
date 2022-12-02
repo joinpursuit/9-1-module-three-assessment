@@ -32,16 +32,6 @@ export default function Locations() {
     setSortLocation(true)
   }
 
-  function handleSortByTerrain() {
-    setLocationsData(
-      [...locations].sort((a, b) => {
-        if (a.terrain.toLowerCase() < b.terrain.toLowerCase()) return -1
-        if (a.terrain.toLowerCase() > b.terrain.toLowerCase()) return 1
-        return 0
-      })
-    )
-    setSortLocation(true)
-  }
   return (
     <div className="locations">
       <h1>List of Locations</h1>
@@ -50,7 +40,6 @@ export default function Locations() {
       </button>
       <button onClick={handleSortByName}>Sort By Name</button>
       <button onClick={handleSortByClimate}> Sort By Climate</button>
-      <button onClick={handleSortByTerrain}> Sort By Terrain</button>
       <section>
         <ul>
           {show &&
