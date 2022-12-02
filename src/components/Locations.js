@@ -13,11 +13,13 @@ export default function Locations() {
   }, [])
 
   function handleSortByName() {
-    ;[...locations].sort((a, b) => {
-      if (a.name.toLowerCase() < b.name.toLowerCase()) return -1
-      if (a.name.toLowerCase() > b.name.toLowerCase()) return 1
-      return 0
-    })
+    setLocationsData(
+      [...locations].sort((a, b) => {
+        if (a.name.toLowerCase() < b.name.toLowerCase()) return -1
+        if (a.name.toLowerCase() > b.name.toLowerCase()) return 1
+        return 0
+      })
+    )
     setSortLocation(true)
   }
 
@@ -31,6 +33,19 @@ export default function Locations() {
     )
     setSortLocation(true)
   }
+    
+  function handleSortByTerrain() {
+    setLocationsData(
+        [...locations].sort((a, b) => {
+          if (a.climate.toLowerCase() < b.climate.toLowerCase()) return -1
+          if (a.climate.toLowerCase() > b.climate.toLowerCase()) return 1
+          return 0
+        })
+      )
+      setSortLocation(true)
+    }
+   
+  }
 
   return (
     <div className="locations">
@@ -40,6 +55,7 @@ export default function Locations() {
       </button>
       <button onClick={handleSortByName}>Sort By Name</button>
       <button onClick={handleSortByClimate}> Sort By Climate</button>
+      <button onClick={handleSortByTerrain}> Sort By Terrain</button>
       <section>
         <ul>
           {show &&
