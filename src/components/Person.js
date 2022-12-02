@@ -8,7 +8,6 @@ export default function Person(person) {
       <h2>Gender: {person.person.gender}</h2>
       <h2>Eye Color: {person.person.eye_color}</h2>
       <h2>Hair Color: {person.person.hair_color}</h2>
-      {/* <h2>Species: {person.person.species}</h2> */}
     </div>
   )
 }
