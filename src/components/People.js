@@ -1,42 +1,51 @@
-import React from 'react';
-import {useState} from 'react'
-import people from "../data/people.json"
+import React from "react";
+import { useState } from "react";
+import people from "../data/people.json";
 
 function People() {
-    const [userInput,setUserInput]= useState('')
-// rendering Not found before user inputs into my form and rendering data withoutout clicking submit WHY?
+  const [userInput, setUserInput] = useState("");
+  const [characterData, setCharacterData] = useState("");
+
+  function handleTextChange(e) {
+    setUserInput(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
     const characterObj = people.find((character) => {
-        return character.name.toUpperCase() === userInput.toUpperCase();
-      });
+      return character.name.toUpperCase() === userInput.toUpperCase();
+    });
 
-    function handleTextChange(e){
-       setUserInput(e.target.value) 
+    if (typeof characterObj === "object") {
+      setCharacterData(characterObj);
+    } else {
+      setCharacterData("Not Found");
     }
 
-    function handleSubmit(e){
-     e.preventDefault()  
-    }
-   
-    return (
-        <div className='people'>
-            <h1>Search for a Person</h1>
-          <form onSubmit={handleSubmit}>
-            <input 
-            type='text'
-            value={userInput} 
-            onInput={handleTextChange}
-            placeholder="Search Character"
-            id='userInput'
-            />
-            <button>SUBMIT</button>
-            </form> 
-            <div>
-            <p>{characterObj ? characterObj.name : "Not found"}</p>
-           <p>{characterObj?.age}</p>
-           <p>{characterObj?.gender}</p> 
-            </div>  
-        </div>
-    );
+    console.log(typeof characterObj);
+  }
+  console.log(userInput.length);
+  return (
+    <div className="people">
+      <h1>Search for a Person</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={userInput}
+          onChange={handleTextChange}
+          placeholder="Search Character"
+          id="userInput"
+        />
+        <button type="submit">SUBMIT</button>
+      </form>
+      <div>
+        <p>{characterData.name}</p>
+        <p>{characterData?.age}</p>
+        <p>{characterData?.gender}</p>
+      </div>
+    </div>
+  );
 }
 
 export default People;

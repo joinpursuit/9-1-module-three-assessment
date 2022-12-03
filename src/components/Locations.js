@@ -8,6 +8,7 @@ function Locations() {
   function handleOnClick() {
     setShowLocation(!showLocation);
   }
+  
   const locationsList = locations.map((location) => {
     return (
       <li>
@@ -24,7 +25,7 @@ function Locations() {
       <button onClick={handleOnClick}>
         {showLocation ? "Hide Location" : "Show Location"}
       </button>
-      <ul>{locationsList}</ul>
+      <ul>{showLocation ? locationsList : null}</ul>
     </div>
   );
 }
