@@ -23,6 +23,10 @@ const Nav = () => {
                 Locations
             </Link>
 
+            <Link to ="/Test">
+                Test
+            </Link>
+
            
         </nav>
         </Router>

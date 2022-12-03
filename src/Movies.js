@@ -15,14 +15,20 @@ const Movies = () => {
         .then(response => response.json())
         .then(data => {
             // console.log('Movies Data: ',data);
+            // for (const movie of data) {
+            //     console.log(movie)
+                
+            // }
             setMovies(data)
-        },open)
+        })
 
     })
+    // console.log(movies)
 
 
     return (
         <>
+        <div className='movies'>
         <h1>Select a Movie</h1>
         <button onClick={handleOpen}>Dropdown</button>
         {open ? (
@@ -33,11 +39,11 @@ const Movies = () => {
                             {movie.title}
                         </li>
                     </ul>
-                
                 )
             })
         ) : null }
-        {open ? <div>Is Open</div> : <div>Is Closed</div>}  
+        {open ? <div>Is Open</div> : <div>Is Closed</div>} 
+        </div>
         </>
     );
 };
