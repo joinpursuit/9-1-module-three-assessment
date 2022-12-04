@@ -4,28 +4,27 @@ import people from "../data/people.json";
 
 function People() {
   const [userInput, setUserInput] = useState("");
-  const [characterData, setCharacterData] = useState("");
+  const [characterData, setCharacterData] = useState({});
+  const [error, setError] = useState(false)
 
   function handleTextChange(e) {
-    setUserInput(e.target.value);
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-
-    const characterObj = people.find((character) => {
-      return character.name.toUpperCase() === userInput.toUpperCase();
-    });
-
-    if (typeof characterObj === "object") {
-      setCharacterData(characterObj);
-    } else {
-      setCharacterData("Not Found");
+      setUserInput(e.target.value);
     }
+    
+    function handleSubmit(e) {
+        e.preventDefault();
 
-    console.log(typeof characterObj);
-  }
-  console.log(userInput.length);
+        const characterObj = people.find((character) => {
+            return character.name.toUpperCase() === userInput.toUpperCase();
+          });
+
+          if(!characterObj){
+            setError(true)
+          } 
+          setCharacterData(characterObj || {})
+        // setCharacterData(characterObj === undefined ? {characterData : characterObj} : characterObj)
+    }
+console.log(characterData)
   return (
     <div className="people">
       <h1>Search for a Person</h1>
@@ -39,11 +38,13 @@ function People() {
         />
         <button type="submit">SUBMIT</button>
       </form>
-      <div>
-        <p>{characterData.name}</p>
-        <p>{characterData?.age}</p>
-        <p>{characterData?.gender}</p>
+        {characterData.name ?  (
+        <div>
+        <p>Name: {characterData.name}</p>
+        <p>Age: {characterData.age}</p>
+        <p>Gender: {characterData.gender}</p>
       </div>
+        ) : error && <p>{"Not found"}</p>  }
     </div>
   );
 }
