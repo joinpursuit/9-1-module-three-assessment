@@ -4,12 +4,46 @@ import { useState, useEffect } from "react";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MoviesListItem from './MoviesListItem';
+import MovieRender from './MovieRender';
 
 const Test = () => {
     const [movies, setMovies] = useState([])
     const [moviesObject, setMoviesObject] = useState([])
+    const [moviesSelection, setMovieSelection] = useState ('')
+    const [movieObject, setMovieObject] = useState({})
+    const [movieRenderCondition, setMovieRenderCondition] = useState(false)
+
+    const handleChange = event => {
+        console.log('handleChange function, dropdown selection: ',event.label)
+        setMovieSelection(event.label)
+        // console.log(moviesSelection)
+
+        const movieSelectionString = event.label
+        const found = movies.find(movieEl => movieEl.title === event.label)
+        console.log(found)
+        setMovieObject(found)
+        setMovieRenderCondition(true)
+        
+
+
+        // console.log(moviesSelection)
+        // setMovieSelection(event.label)
+        // renderSelectionData(event.label)
+    }
+
+
+    // const renderSelectionData = () => {
+    //     // console.log('renderSelectionData function: ',movie)
+    //     // get all data from single selection movie
+    //     const found = movies.find(movieEl => movieEl.title === moviesSelection)
+    //     console.log('renderSelectionData function: ','Found Movie: ',found)
+    //     // console.log(moviesSelection)
+    //     setMovieObject(found)
+    //     console.log(movieObject)
+
+    // }
     
-    // useEffect(,)
+    // useEffect(,) g
         
 
         useEffect(() => {
@@ -79,10 +113,16 @@ const Test = () => {
 
     return (
         <div className="container">
+            <h2>Select a Movie</h2>
+            <br></br>
             <div className="row">
                 <div className="col-md-3"></div>
                 <div className="col-md-6">
-                    <Select options={filmTitlesArr} />
+                    <Select onChange={handleChange} options={filmTitlesArr} />
+                </div>
+                <div>
+                    {movieRenderCondition ? <MovieRender movie={movieObject} /> : null}
+                    {/* <MovieRender movie={movieObject} /> */}
                 </div>
             </div>
         </div>
