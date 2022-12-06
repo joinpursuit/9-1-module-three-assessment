@@ -112,8 +112,9 @@ const Movie = () => {
       ];
 
     return (
-        <div className="container">
+        <div className="movies">
             <h2>Select a Movie</h2>
+            <h2>Another Movie</h2>
             <br></br>
             <div className="row">
                 <div className="col-md-3"></div>
