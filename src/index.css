@@ -31,6 +31,22 @@ h2 {
   font-family: sans-serif;
 }
 
+form {
+  margin-top: 1em;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+p {
+  margin-top: 1em;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
 li {
   font-size: 1em;
 }
