@@ -1,0 +1,30 @@
+.movie-card {
+  transition: all 0.3s linear;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.movie-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+.movie-img-container {
+  text-align: center;
+}
+.movie-img {
+  height: 15rem;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+}
+
+.movie-title h3 {
+  font-family: "Dancing Script", cursive;
+  color: #2caeba;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
