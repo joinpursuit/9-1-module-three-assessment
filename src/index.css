@@ -1,20 +1,56 @@
+body{
+  background-color: black;
+}
+
+
+.home {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+color: white;
+font-family: monospace;
+font-size: larger;
+  
+}
+
+.home img{
+  width: 70%;
+  border-radius: 70px;
+margin-right: 2%;
+margin-bottom: 5%;
+
+
+}
+
+
 nav {
   display: flex;
   justify-content: space-around;
-  background: #517e94;
+  background-image: linear-gradient(rgb(62, 128, 135), rgb(220, 24, 178));
+  background-color: rgb(19, 21, 127);
   padding: 1em;
   margin-bottom: 2em;
-  font-family: sans-serif;
+  font-family: monospace;
+  border-radius: 15px;
+  
+  
 }
 
 nav a {
   text-decoration: none;
   font-size: 2em;
   color: white;
+
+}
+
+nav a:hover {
+  color: rgb(255, 217, 0);
+  font-style: italic;
 }
 
 nav img {
   height: 50px;
+  width: 50px;
 }
 
 main {
@@ -33,24 +69,45 @@ h2 {
 
 li {
   font-size: 1em;
+  
+  
+}
+
+.location {
+  width: 40%;
+  justify-content: center;
 }
 
 .locations {
-  background: ghostwhite;
+background-image: linear-gradient(rgb(118, 35, 76),
+        rgb(27, 41, 147));
   padding: 1em;
+  padding-left: 3em;
+    padding-right: 3em;
   min-height: 80vh;
+  text-align: center;
+  border-radius: 15px;
+    font-family: monospace;
+      font-size: larger;
+      color: white;
+      
+ 
+  
 }
 
 .locations > ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+    justify-content: center;
   margin-left: 0;
+  margin-right: 10%;
+  list-style: none;
 }
 
 .locations ul > li {
-  background: lemonchiffon;
-  width: 26%;
+ 
+  width: 40%;
   padding: 2em;
 }
 
@@ -60,18 +117,33 @@ li {
 }
 
 .locations ul > li > ul li {
-  background: ghostwhite;
+
   display: flex;
   flex-wrap: no-wrap;
   width: 90%;
   justify-content: center;
+  
 }
 
 .locations ul > li > ul li span {
   text-align: center;
+  
+ 
   display: inline-block;
   width: 100%;
 }
+
+.locationsInfo{
+  margin-right: 30%;
+  font-family: monospace;
+    font-size: larger;
+    
+}
+
+.locations h2 {
+  font-family: monospace;
+}
+
 .details li {
   list-style: none;
   margin: 0.5em 0;
@@ -83,9 +155,17 @@ li {
 }
 
 .people {
-  background: lemonchiffon;
+  background-image: linear-gradient(rgb(118, 35, 76),
+        rgb(27, 41, 147));
   height: 80vh;
   padding-top: 1em;
+  padding-left: 3em;
+    padding-right: 3em;
+  text-align: center;
+  border-radius: 15px;
+  font-family: monospace;
+  font-size: larger;
+  color: white;
 }
 
 .people aside {
@@ -93,6 +173,11 @@ li {
   width: 80%;
   min-height: 50%;
   margin: auto;
+}
+
+.people h2{
+  font-family: monospace;
+    font-size: larger
 }
 
 .people aside h3 {
@@ -106,8 +191,17 @@ li {
 
 .movies {
   padding-top: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
   height: 80vh;
-  background: #d7f0f2;
+  background-image: linear-gradient(rgb(118, 35, 76),
+        rgb(27, 41, 147));
+  text-align: center;
+  border-radius: 15px;
+  font-family: monospace;
+  font-size: larger;
+  color: white;
+  
 }
 
 .movies aside {
@@ -115,6 +209,11 @@ li {
   width: 90%;
   margin: auto;
   padding: 1em;
+}
+
+.movies h2 {
+font-family: monospace;
+  font-size: larger
 }
 
 ul li::marker {
